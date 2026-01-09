@@ -17,16 +17,13 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-border/40">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#1a1a1a]/80 backdrop-blur-md border-b border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex flex-col group cursor-pointer">
-            <span className="font-display font-bold text-2xl tracking-tighter group-hover:text-primary transition-colors">
-              aobakwemakesstuff
-            </span>
-            <span className="text-[10px] font-mono text-muted-foreground tracking-widest uppercase group-hover:text-foreground transition-colors">
-              Portfolio &amp; Creative
+            <span className="font-display font-bold text-xl tracking-[0.1em] text-white group-hover:text-[#66ff00] transition-colors uppercase">
+              ABK
             </span>
           </Link>
 
@@ -42,14 +39,14 @@ export function Navigation() {
                   className={cn(
                     "relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-300",
                     isActive 
-                      ? "text-primary-foreground" 
-                      : "text-muted-foreground hover:text-foreground hover:bg-muted/30"
+                      ? "text-black" 
+                      : "text-muted-foreground hover:text-[#66ff00] hover:bg-white/5"
                   )}
                 >
                   {isActive && (
                     <motion.div
                       layoutId="nav-pill"
-                      className="absolute inset-0 bg-primary rounded-full -z-10 shadow-[0_0_15px_rgba(124,58,237,0.5)]"
+                      className="absolute inset-0 bg-[#66ff00] rounded-full -z-10 shadow-[0_0_15px_rgba(102,255,0,0.5)]"
                       transition={{ type: "spring", stiffness: 300, damping: 30 }}
                     />
                   )}

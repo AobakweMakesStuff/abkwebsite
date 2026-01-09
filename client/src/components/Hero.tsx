@@ -1,47 +1,77 @@
 import { motion } from "framer-motion";
-import { ArrowDown } from "lucide-react";
+import { Link } from "wouter";
+import abkPhoto from "@assets/image_1767957041063.png";
 
 export function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-      {/* Abstract Background Blobs */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-primary/20 rounded-full blur-[120px] mix-blend-screen animate-pulse" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40vw] h-[40vw] bg-blue-500/10 rounded-full blur-[100px] mix-blend-screen" />
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#1a1a1a] text-white pt-20">
+      {/* Top Logo Section */}
+      <div className="text-center mb-12">
+        <h1 className="text-6xl md:text-8xl font-light tracking-[0.2em] mb-2 leading-none">
+          AMS
+        </h1>
+        <p className="text-xs md:text-sm tracking-[0.5em] font-light uppercase opacity-80">
+          AOBAKWE MAKES STUFF
+        </p>
       </div>
 
-      <div className="container px-4 text-center z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <span className="inline-block px-4 py-1.5 mb-6 rounded-full border border-primary/20 bg-primary/10 text-primary text-sm font-mono font-medium tracking-wider uppercase">
-            Creative Portfolio
-          </span>
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-bold tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-br from-white via-white/90 to-white/50 pb-2">
-            aobakwe
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">
-              makesstuff
-            </span>
-          </h1>
-          <p className="max-w-2xl mx-auto text-xl md:text-2xl text-muted-foreground leading-relaxed">
-            Visual Designer, Video Editor, and Music Producer based in the creative digital void.
+      {/* Main Content Grid */}
+      <div className="container max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 items-center gap-8 mb-16">
+        {/* Left Text */}
+        <div className="space-y-6 text-sm md:text-base font-light leading-relaxed">
+          <p>Hi there!</p>
+          <p>My name is Aobakwe, but most people just call me ABK :)</p>
+          <p>
+            I've always been a bit of a jack-of-all-trades, and yes, the long-forgotten rest of the saying definitely applies:
           </p>
-        </motion.div>
+          <p className="italic font-normal">
+            Jack of all trades, master of none...
+            <span className="text-[#66ff00] block mt-1 not-italic font-bold">
+              but oftentimes better than master of one.
+            </span>
+          </p>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2"
-        >
-          <div className="flex flex-col items-center gap-2 text-muted-foreground/50">
-            <span className="text-xs uppercase tracking-widest">Scroll</span>
-            <ArrowDown className="w-5 h-5 animate-bounce" />
-          </div>
-        </motion.div>
+        {/* Center Photo */}
+        <div className="relative aspect-[3/4] w-full max-w-[300px] mx-auto rounded-lg overflow-hidden border border-white/10 grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl">
+          <img 
+            src={abkPhoto} 
+            alt="Aobakwe (ABK)" 
+            className="w-full h-full object-cover scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+        </div>
+
+        {/* Right Text */}
+        <div className="space-y-6 text-sm md:text-base font-light leading-relaxed">
+          <p>
+            Since my teen years, I've grown in different skills and creative interests. 
+            Some were just hobbies, some were entrepreneurial, and some even became career stepping stones. 
+            This website is a showcase, if you will, of the things I've built and explored along the way.
+          </p>
+          <p className="font-normal opacity-90">
+            Click below to pique your interest.
+          </p>
+        </div>
+      </div>
+
+      {/* Bottom Navigation Buttons */}
+      <div className="flex flex-col md:flex-row gap-4 w-full max-w-4xl px-6 mb-12">
+        <Link href="/graphics" className="flex-1">
+          <button className="w-full py-4 px-6 border border-white/20 rounded-full hover:bg-white hover:text-black transition-all duration-300 text-[10px] tracking-widest uppercase font-medium">
+            AOBAKWE MAKES GRAPHICS
+          </button>
+        </Link>
+        <Link href="/video" className="flex-1">
+          <button className="w-full py-4 px-6 border border-white/20 rounded-full hover:bg-white hover:text-black transition-all duration-300 text-[10px] tracking-widest uppercase font-medium">
+            AOBAKWE MAKES VIDEO EDITS
+          </button>
+        </Link>
+        <Link href="/music" className="flex-1">
+          <button className="w-full py-4 px-6 border border-white/20 rounded-full hover:bg-white hover:text-black transition-all duration-300 text-[10px] tracking-widest uppercase font-medium">
+            AOBAKWE MAKES MUSIC
+          </button>
+        </Link>
       </div>
     </section>
   );
