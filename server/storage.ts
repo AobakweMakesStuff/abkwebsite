@@ -18,52 +18,44 @@ export class MemStorage implements IStorage {
   private seedProjects() {
     const seeds: InsertProject[] = [
       {
-        title: "Neon Cityscapes",
-        description: "A series of digital paintings exploring cyberpunk aesthetics.",
+        title: "Godfidence Logo",
+        description: "Branding and logo design for Godfidence.",
         type: "graphic",
-        mediaUrl: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&q=80",
-        thumbnailUrl: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&q=80",
+        mediaUrl: "/images/projects/godfidence-logo.png",
+        thumbnailUrl: "/images/projects/godfidence-logo.png",
         featured: true
       },
       {
-        title: "Abstract Forms",
-        description: "3D rendered abstract geometry and light studies.",
+        title: "WeThinkCode Branding",
+        description: "Visual identity and design elements for WeThinkCode.",
         type: "graphic",
-        mediaUrl: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80",
-        thumbnailUrl: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80",
+        mediaUrl: "/images/projects/wethinkcode-design.png",
+        thumbnailUrl: "/images/projects/wethinkcode-design.png",
         featured: true
       },
       {
-        title: "Cinematic Showreel",
-        description: "Compilation of video editing and motion graphics work.",
+        title: "Grace Church Media",
+        description: "Graphic design and media assets for Grace Church.",
+        type: "graphic",
+        mediaUrl: "/images/projects/grace-church.png",
+        thumbnailUrl: "/images/projects/grace-church.png",
+        featured: true
+      },
+      {
+        title: "Cinematic Showreel 2024",
+        description: "A compilation of professional video editing work.",
         type: "video",
-        mediaUrl: "https://www.youtube.com/watch?v=LXb3EKWsInQ", // Placeholder 4K landscape
+        mediaUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         thumbnailUrl: "https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&q=80",
         featured: true
       },
       {
-        title: "Short Film: The Journey",
-        description: "A narrative short film about finding one's path.",
-        type: "video",
-        mediaUrl: "https://www.youtube.com/watch?v=ysz5S6PUM-U", // Placeholder
-        thumbnailUrl: "https://images.unsplash.com/photo-1579165466741-7f35a4755657?auto=format&fit=crop&q=80",
-        featured: false
-      },
-      {
-        title: "Midnight Drive",
-        description: "Synthwave track composed for night drives.",
+        title: "Midnight Drive (Synthwave)",
+        description: "Full track available on YouTube and Spotify.",
         type: "music",
-        mediaUrl: "https://soundcloud.com/awfulpune/sets/synthwave", // Placeholder
+        mediaUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         thumbnailUrl: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80",
         featured: true
-      },
-       {
-        title: "Ambient Thoughts",
-        description: "Lo-fi beats for studying and relaxing.",
-        type: "music",
-        mediaUrl: "https://soundcloud.com/lofi_girl/sets/lofi-hip-hop-music-beats", // Placeholder
-        thumbnailUrl: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&q=80",
-        featured: false
       }
     ];
 

@@ -56,9 +56,9 @@ If you require the dynamic API features, consider platforms like **Replit**, **V
 ## Replacing Placeholder Content
 
 To add your actual creative work:
-1.  **Graphics**: Update the `mediaUrl` in `server/storage.ts` with links to your hosted images (or place them in `client/public/images/`).
-2.  **Videos**: Use YouTube or Vimeo URLs in the `mediaUrl` field. The frontend uses `react-player` to handle these automatically.
-3.  **Music**: Provide SoundCloud URLs or direct links to audio files in the `mediaUrl` field.
+1.  **Graphics**: Place your image files in `client/public/images/projects/`. Update the `mediaUrl` and `thumbnailUrl` in `server/storage.ts` to `/images/projects/your-file.png`.
+2.  **Videos**: Use YouTube URLs in the `mediaUrl` field.
+3.  **Music**: Use YouTube or Spotify embed links in the `mediaUrl` field.
 
 ## Technical Details
 
