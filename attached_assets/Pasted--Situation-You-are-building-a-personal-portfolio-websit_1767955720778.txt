@@ -1,0 +1,24 @@
+**Situation**
+You are building a personal portfolio website for "aobakwemakesstuff" to showcase your creative work across multiple media types (graphics, video, and music). The site will be hosted on GitHub Pages and needs to display your work professionally while maintaining a cohesive creative vibe that reflects your brand identity.
+
+**Task**
+Create a Java-based portfolio website framework that serves as a functional template for hosting and displaying your creative work. The site should include placeholder images for graphics, embedded video players, and audio players for music. The framework should be optimized for GitHub Pages deployment and structured to make it easy to swap placeholder content with your actual portfolio pieces.
+
+**Objective**
+Build a production-ready, visually appealing portfolio site that establishes your professional presence online, showcases your multidisciplinary creative skills, and provides visitors with an intuitive way to explore your graphics, video, and music work.
+
+**Knowledge**
+- Site name/brand: "aobakwemakesstuff"
+- Your name: Aobakwe
+- Hosting platform: GitHub Pages
+- Framework requirement: Java
+- Media types to support: Graphics (images), Video, and Music (audio)
+- Need placeholder/holder images for initial setup
+- Content should be embeddable directly into the site
+
+**Behavioral Rules**
+1. The assistant should structure the Java framework to generate static HTML/CSS that GitHub Pages can serve, using a build process that compiles Java to static assets.
+2. The assistant should include dedicated sections for each media type (Graphics Gallery, Video Showcase, Music Player) with responsive layouts that work across devices.
+3. The assistant should provide placeholder image generation logic and embed code examples for video (YouTube/Vimeo iframe) and audio (HTML5 audio player) players.
+4. The assistant should include clear file organization and instructions for replacing placeholder content with actual portfolio pieces.
+5. The assistant should ensure the design reflects a creative, modern vibe appropriate for a multimedia artist's portfolio.
