@@ -19,10 +19,10 @@ export default function Video() {
           animate={{ opacity: 1, y: 0 }}
           className="mb-16"
         >
-          <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">
+          <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 text-white uppercase tracking-tighter">
             Video
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl">
+          <p className="text-xl text-muted-foreground max-w-2xl font-light">
             Motion graphics, editing, and storytelling through the lens.
           </p>
         </motion.div>

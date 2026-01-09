@@ -19,10 +19,10 @@ export default function Music() {
           animate={{ opacity: 1, y: 0 }}
           className="mb-16"
         >
-          <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+          <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 text-white uppercase tracking-tighter">
             Music
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl">
+          <p className="text-xl text-muted-foreground max-w-2xl font-light">
             Sonic landscapes, beats, and audio production. Listen loud.
           </p>
         </motion.div>

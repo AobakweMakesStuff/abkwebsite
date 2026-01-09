@@ -41,7 +41,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <div className="relative overflow-hidden rounded-xl border border-border/50 bg-card shadow-lg transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 hover:border-primary/50">
+          <div className="relative overflow-hidden rounded-xl border border-white/5 bg-[#1a1a1a] shadow-lg transition-all duration-500 hover:shadow-2xl hover:shadow-[#66ff00]/20 hover:-translate-y-2 hover:border-[#66ff00]/50">
             {/* Image/Thumbnail */}
             <div className="relative aspect-[4/3] overflow-hidden bg-muted">
               {project.thumbnailUrl ? (
@@ -68,7 +68,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
               {/* Icon Overlay on Hover */}
               <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <div className="rounded-full bg-primary/90 p-4 text-white shadow-lg backdrop-blur-sm transform scale-90 group-hover:scale-100 transition-transform">
+                <div className="rounded-full bg-[#66ff00]/90 p-4 text-black shadow-lg backdrop-blur-sm transform scale-90 group-hover:scale-100 transition-transform">
                   {getTypeIcon(project.type)}
                 </div>
               </div>
@@ -76,7 +76,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
             {/* Content Preview */}
             <div className="p-5">
-              <h3 className="text-xl font-bold font-display tracking-tight group-hover:text-primary transition-colors">
+              <h3 className="text-xl font-bold font-display tracking-tight group-hover:text-[#66ff00] transition-colors">
                 {project.title}
               </h3>
               <p className="mt-2 text-sm text-muted-foreground line-clamp-2">
@@ -117,7 +117,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               <div>
                 <DialogTitle className="text-2xl md:text-3xl font-bold font-display">{project.title}</DialogTitle>
                 <div className="flex items-center gap-2 mt-2">
-                  <Badge variant="outline" className="text-primary border-primary/20 bg-primary/5 uppercase">
+                  <Badge variant="outline" className="text-[#66ff00] border-[#66ff00]/20 bg-[#66ff00]/5 uppercase">
                     {project.type}
                   </Badge>
                   {project.featured && (

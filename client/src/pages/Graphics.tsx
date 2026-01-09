@@ -19,10 +19,10 @@ export default function Graphics() {
           animate={{ opacity: 1, y: 0 }}
           className="mb-16"
         >
-          <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">
+          <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 text-white uppercase tracking-tighter">
             Graphics
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl">
+          <p className="text-xl text-muted-foreground max-w-2xl font-light">
             Visual design, branding, and digital art. Exploring form and color.
           </p>
         </motion.div>
