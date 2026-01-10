@@ -81,7 +81,7 @@ export default function Graphics() {
             <div className="w-24 h-1 bg-[#4db300]" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {!isLoading && projects?.filter(p => p.tags.includes("WeThinkCode_")).map((project, index) => (
+            {!isLoading && projects?.filter(p => p.tags?.includes("WeThinkCode_")).map((project, index) => (
               <ProjectCard key={project.id} project={project} index={index} />
             ))}
           </div>
@@ -94,7 +94,7 @@ export default function Graphics() {
             <div className="w-24 h-1 bg-[#4db300]" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {!isLoading && projects?.filter(p => p.tags.includes("Logo Redraws")).map((project, index) => (
+            {!isLoading && projects?.filter(p => p.tags?.includes("Logo Redraws")).map((project, index) => (
               <ProjectCard key={project.id} project={project} index={index} />
             ))}
           </div>
@@ -107,7 +107,7 @@ export default function Graphics() {
             <div className="w-24 h-1 bg-[#4db300]" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {!isLoading && projects?.filter(p => p.tags.includes("Church")).map((project, index) => (
+            {!isLoading && projects?.filter(p => p.tags?.includes("Church")).map((project, index) => (
               <ProjectCard key={project.id} project={project} index={index} />
             ))}
           </div>
