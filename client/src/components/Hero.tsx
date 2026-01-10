@@ -36,9 +36,20 @@ export function Hero() {
           </p>
           <p className="italic font-normal">
             Jack of all trades, master of none...
-            <span className="text-[#66ff00] block mt-1 not-italic font-bold">
+            <motion.span 
+              className="relative inline-block mt-1 not-italic font-bold text-white px-1"
+              initial={{ backgroundSize: "0% 100%" }}
+              whileInView={{ backgroundSize: "100% 100%" }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              style={{
+                backgroundImage: "linear-gradient(to right, #4db300, #4db300)",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "0 0",
+              }}
+            >
               but oftentimes better than master of one.
-            </span>
+            </motion.span>
           </p>
         </div>
 
