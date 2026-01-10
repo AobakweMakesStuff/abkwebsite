@@ -26,24 +26,24 @@ export function Hero() {
       </div>
 
       {/* Main Content Grid */}
-      <div className="relative z-10 container max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 items-center gap-8 mb-16">
+      <div className="relative z-10 container max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-[1.2fr_0.6fr_1.2fr] items-center gap-4 md:gap-8 mb-16">
         {/* Left Text */}
-        <div className="space-y-6 text-sm md:text-base font-light leading-relaxed drop-shadow-lg">
+        <div className="space-y-4 text-sm md:text-base font-light leading-relaxed drop-shadow-lg text-left">
           <p>Hi there!</p>
           <p>My name is Aobakwe, but most people just call me ABK :)</p>
-          <p>
+          <p className="max-w-[320px]">
             I've always been a bit of a jack-of-all-trades, and yes, the long-forgotten rest of the saying definitely applies:
           </p>
           <p className="italic font-normal">
             Jack of all trades, master of none...
             <motion.span 
-              className="relative inline-block mt-1 not-italic font-bold text-white px-1"
+              className="relative inline not-italic font-bold text-white"
               initial={{ backgroundSize: "0% 100%" }}
               whileInView={{ backgroundSize: "100% 100%" }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.5 }}
               style={{
-                backgroundImage: "linear-gradient(to right, #4db300, #4db300)",
+                backgroundImage: "linear-gradient(to right, #3d8c00, #3d8c00)",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "0 0",
               }}
@@ -53,12 +53,12 @@ export function Hero() {
           </p>
         </div>
 
-        {/* Center Space - Background image is visible here */}
-        <div className="hidden md:block h-64" />
+        {/* Center Space */}
+        <div className="hidden md:block" />
 
         {/* Right Text */}
-        <div className="space-y-6 text-sm md:text-base font-light leading-relaxed drop-shadow-lg">
-          <p>
+        <div className="space-y-6 text-sm md:text-base font-light leading-relaxed drop-shadow-lg text-left">
+          <p className="max-w-[450px]">
             Since my teen years, I've grown in different skills and creative interests. 
             Some were just hobbies, some were entrepreneurial, and some even became career stepping stones. 
             This website is a showcase, if you will, of the things I've built and explored along the way.
@@ -72,17 +72,17 @@ export function Hero() {
       {/* Bottom Navigation Buttons */}
       <div className="relative z-20 flex flex-col md:flex-row gap-4 w-full max-w-4xl px-6 mb-12">
         <Link href="/graphics" className="flex-1">
-          <button className="w-full py-4 px-6 border border-white/20 rounded-full hover:bg-white hover:text-black transition-all duration-300 text-[10px] tracking-widest uppercase font-medium">
+          <button className="w-full py-4 px-6 border-2 border-white/20 rounded-full hover:bg-white hover:text-black transition-all duration-300 text-[10px] tracking-widest uppercase font-medium">
             AOBAKWE MAKES GRAPHICS
           </button>
         </Link>
         <Link href="/video" className="flex-1">
-          <button className="w-full py-4 px-6 border border-white/20 rounded-full hover:bg-white hover:text-black transition-all duration-300 text-[10px] tracking-widest uppercase font-medium">
+          <button className="w-full py-4 px-6 border-2 border-white/20 rounded-full hover:bg-white hover:text-black transition-all duration-300 text-[10px] tracking-widest uppercase font-medium">
             AOBAKWE MAKES VIDEO EDITS
           </button>
         </Link>
         <Link href="/music" className="flex-1">
-          <button className="w-full py-4 px-6 border border-white/20 rounded-full hover:bg-white hover:text-black transition-all duration-300 text-[10px] tracking-widest uppercase font-medium">
+          <button className="w-full py-4 px-6 border-2 border-white/20 rounded-full hover:bg-white hover:text-black transition-all duration-300 text-[10px] tracking-widest uppercase font-medium">
             AOBAKWE MAKES MUSIC
           </button>
         </Link>
