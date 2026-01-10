@@ -21,21 +21,22 @@ export default function Graphics() {
         videoSrc={graphicsVideo}
         title="Graphics"
         description="My graphic design journey started in my early teens, making stuff for my home church. From there I built a small business, worked on personal projects, and eventually designed at WeThinkCode_ (the software development academy I attended)."
-      />
-
-      <main className="container mx-auto px-6 py-12 max-w-7xl">
-        {/* Filters placeholder - following the design in screenshot */}
-        <div className="flex flex-wrap justify-center gap-4 mb-16">
+        showGradient={false}
+        darkText={true}
+      >
+        <div className="flex flex-wrap justify-center gap-4">
           {tags.map((tag) => (
             <button
               key={tag}
-              className="px-8 py-3 rounded-full border-2 border-white/20 text-white hover:border-white/60 transition-all duration-300 text-[10px] tracking-widest uppercase font-medium"
+              className="px-8 py-3 rounded-full border-2 border-black/20 text-black hover:border-black/60 transition-all duration-300 text-[10px] tracking-widest uppercase font-medium"
             >
               {tag}
             </button>
           ))}
         </div>
+      </PageHero>
 
+      <main className="container mx-auto px-6 py-12 max-w-7xl">
         {isLoading ? (
           <div className="flex justify-center py-20">
             <Loader2 className="w-10 h-10 animate-spin text-[#66ff00]" />
