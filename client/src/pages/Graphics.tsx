@@ -68,7 +68,11 @@ export default function Graphics() {
                 const project = projects?.find(p => p.title === title);
                 return project ? (
                   <ProjectCard key={project.id} project={project} index={index} />
-                ) : null;
+                ) : (
+                  <div key={title} className="aspect-square bg-muted/20 rounded-lg flex items-center justify-center border border-dashed border-muted">
+                    <p className="text-xs text-muted-foreground">{title}</p>
+                  </div>
+                );
               })
             )}
           </div>
