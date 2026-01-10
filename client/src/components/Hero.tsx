@@ -11,9 +11,9 @@ export function Hero() {
         <img 
           src={abkPhoto} 
           alt="Background" 
-          className="w-full h-full object-cover opacity-40 grayscale"
+          className="w-full h-full object-cover opacity-80"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/40" />
       </div>
 
       {/* Top Logo Section */}
