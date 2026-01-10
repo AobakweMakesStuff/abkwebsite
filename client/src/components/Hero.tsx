@@ -1,24 +1,34 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import abkPhoto from "@assets/image_1767957041063.png";
+import abkPhoto from "@assets/AOBAKWE_expanded_(8)_1768045734543.png";
+import amsLogo from "@assets/AMS_LogoTransparent_White_1768045691519.png";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#1a1a1a] text-white pt-20">
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black text-white pt-20">
+      {/* Background Image Wash */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={abkPhoto} 
+          alt="Background" 
+          className="w-full h-full object-cover opacity-40 grayscale"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80" />
+      </div>
+
       {/* Top Logo Section */}
-      <div className="text-center mb-12">
-        <h1 className="text-6xl md:text-8xl font-light tracking-[0.2em] mb-2 leading-none">
-          AMS
-        </h1>
-        <p className="text-xs md:text-sm tracking-[0.5em] font-light uppercase opacity-80">
-          AOBAKWE MAKES STUFF
-        </p>
+      <div className="relative z-10 text-center mb-12">
+        <img 
+          src={amsLogo} 
+          alt="AMS Aobakwe Makes Stuff" 
+          className="h-24 md:h-32 mx-auto object-contain mb-4"
+        />
       </div>
 
       {/* Main Content Grid */}
-      <div className="container max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 items-center gap-8 mb-16">
+      <div className="relative z-10 container max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 items-center gap-8 mb-16">
         {/* Left Text */}
-        <div className="space-y-6 text-sm md:text-base font-light leading-relaxed">
+        <div className="space-y-6 text-sm md:text-base font-light leading-relaxed drop-shadow-lg">
           <p>Hi there!</p>
           <p>My name is Aobakwe, but most people just call me ABK :)</p>
           <p>
@@ -32,18 +42,11 @@ export function Hero() {
           </p>
         </div>
 
-        {/* Center Photo */}
-        <div className="relative aspect-[3/4] w-full max-w-[300px] mx-auto rounded-lg overflow-hidden border border-white/10 grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl">
-          <img 
-            src={abkPhoto} 
-            alt="Aobakwe (ABK)" 
-            className="w-full h-full object-cover scale-110"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-        </div>
+        {/* Center Space - Background image is visible here */}
+        <div className="hidden md:block h-64" />
 
         {/* Right Text */}
-        <div className="space-y-6 text-sm md:text-base font-light leading-relaxed">
+        <div className="space-y-6 text-sm md:text-base font-light leading-relaxed drop-shadow-lg">
           <p>
             Since my teen years, I've grown in different skills and creative interests. 
             Some were just hobbies, some were entrepreneurial, and some even became career stepping stones. 

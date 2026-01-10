@@ -5,11 +5,10 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const NAV_ITEMS = [
-  { href: "/", label: "All Work" },
+  { href: "/", label: "Home" },
   { href: "/graphics", label: "Graphics" },
   { href: "/video", label: "Video" },
   { href: "/music", label: "Music" },
-  { href: "/about", label: "About" },
 ];
 
 export function Navigation() {
@@ -22,9 +21,6 @@ export function Navigation() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex flex-col group cursor-pointer">
-            <span className="font-display font-bold text-xl tracking-[0.1em] text-white group-hover:text-[#66ff00] transition-colors uppercase">
-              ABK
-            </span>
           </Link>
 
           {/* Desktop Nav */}
