@@ -11,6 +11,8 @@ const NAV_ITEMS = [
   { href: "/music", label: "Music" },
 ];
 
+import amsLogoDark from "@assets/AMS_LogoTransparent_1768048925068.png";
+
 export function Navigation() {
   const [location] = useLocation();
   const [isOpen, setIsOpen] = useState(false);
@@ -20,10 +22,12 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex flex-col group cursor-pointer">
-            <span className="font-display font-bold text-xl tracking-[0.1em] text-black group-hover:text-[#4db300] transition-colors uppercase">
-              AMS
-            </span>
+          <Link href="/" className="flex items-center group cursor-pointer">
+            <img 
+              src={amsLogoDark} 
+              alt="AMS" 
+              className="h-10 md:h-12 w-auto object-contain transition-transform group-hover:scale-105"
+            />
           </Link>
 
           {/* Desktop Nav */}
