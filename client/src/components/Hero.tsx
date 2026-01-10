@@ -17,11 +17,11 @@ export function Hero() {
       </div>
 
       {/* Top Logo Section */}
-      <div className="relative z-10 text-center mb-12">
+      <div className="relative z-20 text-center mb-4 -mt-24 md:-mt-32">
         <img 
           src={amsLogo} 
           alt="AMS Aobakwe Makes Stuff" 
-          className="h-24 md:h-32 mx-auto object-contain mb-4"
+          className="h-32 md:h-48 mx-auto object-contain mb-4"
         />
       </div>
 
@@ -59,7 +59,7 @@ export function Hero() {
       </div>
 
       {/* Bottom Navigation Buttons */}
-      <div className="flex flex-col md:flex-row gap-4 w-full max-w-4xl px-6 mb-12">
+      <div className="relative z-20 flex flex-col md:flex-row gap-4 w-full max-w-4xl px-6 mb-12">
         <Link href="/graphics" className="flex-1">
           <button className="w-full py-4 px-6 border border-white/20 rounded-full hover:bg-white hover:text-black transition-all duration-300 text-[10px] tracking-widest uppercase font-medium">
             AOBAKWE MAKES GRAPHICS
