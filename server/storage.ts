@@ -24,7 +24,8 @@ export class MemStorage implements IStorage {
         mediaUrl: "/images/projects/ah-logo.png",
         thumbnailUrl: "/images/projects/ah-logo.png",
         featured: true,
-        tags: ["Logos"]
+        tags: ["Logos"],
+        gallery: ["/images/projects/ah-logo.png", "/images/projects/godfidence-logo.png"]
       },
       {
         title: "WholenessWithD Logo",
@@ -33,7 +34,8 @@ export class MemStorage implements IStorage {
         mediaUrl: "/images/projects/wholeness-logo.png",
         thumbnailUrl: "/images/projects/wholeness-logo.png",
         featured: true,
-        tags: ["Logos"]
+        tags: ["Logos"],
+        gallery: ["/images/projects/wholeness-logo.png"]
       },
       {
         title: "Grace Empowered Logo",
@@ -42,7 +44,8 @@ export class MemStorage implements IStorage {
         mediaUrl: "/images/projects/grace-logo.png",
         thumbnailUrl: "/images/projects/grace-logo.png",
         featured: true,
-        tags: ["Logos"]
+        tags: ["Logos"],
+        gallery: ["/images/projects/grace-logo.png"]
       },
       {
         title: "Mkholo Logo",
@@ -51,7 +54,8 @@ export class MemStorage implements IStorage {
         mediaUrl: "/images/projects/mkholo-logo.png",
         thumbnailUrl: "/images/projects/mkholo-logo.png",
         featured: true,
-        tags: ["Logos"]
+        tags: ["Logos"],
+        gallery: ["/images/projects/mkholo-logo.png"]
       },
       {
         title: "Godfidence Logo",
@@ -60,7 +64,8 @@ export class MemStorage implements IStorage {
         mediaUrl: "/images/projects/godfidence-logo.png",
         thumbnailUrl: "/images/projects/godfidence-logo.png",
         featured: true,
-        tags: ["Logos"]
+        tags: ["Logos"],
+        gallery: ["/images/projects/godfidence-logo.png"]
       },
       {
         title: "WeThinkCode Branding",
@@ -69,7 +74,8 @@ export class MemStorage implements IStorage {
         mediaUrl: "/images/projects/wethinkcode-design.png",
         thumbnailUrl: "/images/projects/wethinkcode-design.png",
         featured: true,
-        tags: ["WeThinkCode_"]
+        tags: ["WeThinkCode_"],
+        gallery: ["/images/projects/wethinkcode-design.png"]
       },
       {
         title: "Grace Church Media",
@@ -78,7 +84,8 @@ export class MemStorage implements IStorage {
         mediaUrl: "/images/projects/grace-church.png",
         thumbnailUrl: "/images/projects/grace-church.png",
         featured: true,
-        tags: ["Church"]
+        tags: ["Church"],
+        gallery: ["/images/projects/grace-church.png"]
       },
       {
         title: "Cinematic Showreel 2024",
@@ -87,7 +94,8 @@ export class MemStorage implements IStorage {
         mediaUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         thumbnailUrl: "https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&q=80",
         featured: true,
-        tags: []
+        tags: [],
+        gallery: []
       },
       {
         title: "Midnight Drive (Synthwave)",
@@ -96,13 +104,21 @@ export class MemStorage implements IStorage {
         mediaUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         thumbnailUrl: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80",
         featured: true,
-        tags: []
+        tags: [],
+        gallery: []
       }
     ];
 
     seeds.forEach(p => {
       const id = this.currentId++;
-      this.projects.set(id, { ...p, id });
+      this.projects.set(id, { 
+        ...p, 
+        id,
+        thumbnailUrl: p.thumbnailUrl ?? null,
+        featured: p.featured ?? false,
+        tags: p.tags ?? [],
+        gallery: p.gallery ?? []
+      });
     });
   }
 

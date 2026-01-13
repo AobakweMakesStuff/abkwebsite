@@ -11,6 +11,7 @@ export const projects = pgTable("projects", {
   thumbnailUrl: text("thumbnail_url"),
   featured: boolean("featured").default(false),
   tags: text("tags").array(),
+  gallery: text("gallery").array(),
 });
 
 export const insertProjectSchema = createInsertSchema(projects).omit({ id: true });

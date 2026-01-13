@@ -1,6 +1,6 @@
 import { Project } from "@shared/schema";
-import { motion } from "framer-motion";
-import { Play, Music, Image as ImageIcon, ExternalLink } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Play, Music, Image as ImageIcon, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import ReactPlayer from "react-player";
 import {
@@ -12,6 +12,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 interface ProjectCardProps {
   project: Project;
@@ -20,6 +21,21 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, index }: ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const galleryImages = project.gallery && project.gallery.length > 0 
+    ? project.gallery 
+    : [project.mediaUrl];
+
+  const nextImage = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setCurrentImageIndex((prev) => (prev + 1) % galleryImages.length);
+  };
+
+  const prevImage = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setCurrentImageIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
+  };
 
   const getTypeIcon = (type: string) => {
     switch (type) {
@@ -31,7 +47,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
   };
 
   return (
-    <Dialog>
+    <Dialog onOpenChange={(open) => !open && setCurrentImageIndex(0)}>
       <DialogTrigger asChild>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -87,10 +103,10 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         </motion.div>
       </DialogTrigger>
 
-      <DialogContent className="max-w-4xl bg-card border-border p-0 overflow-hidden sm:rounded-2xl">
+      <DialogContent className="max-w-4xl bg-[#121212] border-white/10 p-0 overflow-hidden sm:rounded-2xl">
         <div className="flex flex-col">
-          {/* Media Player / Full View */}
-          <div className="w-full bg-black aspect-video relative flex items-center justify-center">
+          {/* Media Player / Gallery View */}
+          <div className="w-full bg-black aspect-video relative flex items-center justify-center group/modal">
             {project.type === "video" || project.type === "music" ? (
               <ReactPlayer 
                 url={project.mediaUrl} 
@@ -101,12 +117,50 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 light={project.thumbnailUrl} // Use thumbnail as preview
               />
             ) : (
-              <div className="w-full h-full relative overflow-y-auto max-h-[70vh] bg-black/50">
-                <img 
-                  src={project.mediaUrl} 
-                  alt={project.title} 
-                  className="w-full h-auto object-contain mx-auto"
-                />
+              <div className="w-full h-full relative overflow-hidden bg-black/50">
+                <AnimatePresence mode="wait">
+                  <motion.img 
+                    key={currentImageIndex}
+                    src={galleryImages[currentImageIndex]} 
+                    alt={`${project.title} - Image ${currentImageIndex + 1}`} 
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -20 }}
+                    transition={{ duration: 0.3 }}
+                    className="w-full h-full object-contain mx-auto"
+                  />
+                </AnimatePresence>
+
+                {galleryImages.length > 1 && (
+                  <>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-[#66ff00] hover:text-black rounded-full text-white opacity-0 group-hover/modal:opacity-100 transition-opacity"
+                      onClick={prevImage}
+                    >
+                      <ChevronLeft className="w-6 h-6" />
+                    </Button>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-[#66ff00] hover:text-black rounded-full text-white opacity-0 group-hover/modal:opacity-100 transition-opacity"
+                      onClick={nextImage}
+                    >
+                      <ChevronRight className="w-6 h-6" />
+                    </Button>
+                    
+                    {/* Progress dots */}
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                      {galleryImages.map((_, i) => (
+                        <div 
+                          key={i}
+                          className={`w-1.5 h-1.5 rounded-full transition-colors ${i === currentImageIndex ? 'bg-[#66ff00]' : 'bg-white/30'}`}
+                        />
+                      ))}
+                    </div>
+                  </>
+                )}
               </div>
             )}
           </div>
@@ -115,7 +169,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           <div className="p-6 md:p-8 space-y-4">
             <div className="flex items-center justify-between">
               <div>
-                <DialogTitle className="text-2xl md:text-3xl font-bold font-display">{project.title}</DialogTitle>
+                <DialogTitle className="text-2xl md:text-3xl font-bold font-display text-white">{project.title}</DialogTitle>
                 <div className="flex items-center gap-2 mt-2">
                   <Badge variant="outline" className="text-[#66ff00] border-[#66ff00]/20 bg-[#66ff00]/5 uppercase">
                     {project.type}
@@ -125,12 +179,17 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                       Featured
                     </Badge>
                   )}
+                  {galleryImages.length > 1 && (
+                    <Badge variant="secondary" className="bg-[#66ff00]/10 text-[#66ff00] border-[#66ff00]/20">
+                      Gallery: {currentImageIndex + 1}/{galleryImages.length}
+                    </Badge>
+                  )}
                 </div>
               </div>
             </div>
             
-            <DialogDescription className="text-base md:text-lg leading-relaxed text-muted-foreground">
-              {project.description}
+            <DialogDescription className="text-base md:text-lg leading-relaxed text-zinc-400">
+              {project.description || ""}
             </DialogDescription>
           </div>
         </div>
