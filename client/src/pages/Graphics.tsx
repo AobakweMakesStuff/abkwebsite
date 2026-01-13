@@ -96,13 +96,13 @@ export default function Graphics() {
                   {wtcProject.description}
                 </p>
               </div>
-              <div className="columns-1 md:columns-2 gap-8 space-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                 {wtcProject.gallery?.map((img, idx) => (
-                  <div key={idx} className="break-inside-avoid rounded-lg overflow-hidden border border-white/5 bg-white/5 hover-elevate transition-all duration-500">
+                  <div key={idx} className="rounded-lg overflow-hidden border border-white/5 bg-white/5 hover-elevate transition-all duration-500">
                     <img 
                       src={img} 
                       alt={`WeThinkCode Branding ${idx + 1}`}
-                      className="w-full h-auto object-cover"
+                      className="w-full h-auto block"
                     />
                   </div>
                 ))}
