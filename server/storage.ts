@@ -164,6 +164,22 @@ export class MemStorage implements IStorage {
         ]
       },
       {
+        title: "Potter's House Church Media",
+        description: "Graphic design and social media content for The Potter's House Community Church during the COVID-19 pandemic. This project involved creating digital signage for 'Church@Home' services, social media announcements for special events like Passover and Pentecost, and maintaining a consistent visual presence while services were held exclusively online.",
+        type: "graphic",
+        mediaUrl: "/attached_assets/Church@Home_1764787849253_1768301139380.png",
+        thumbnailUrl: "/attached_assets/Church@Home_1764787849253_1768301139380.png",
+        featured: true,
+        tags: ["Church"],
+        gallery: [
+          "/attached_assets/behance_img_6_1768301329918.jpg",
+          "/attached_assets/behance_img_2_1768301329919.jpg",
+          "/attached_assets/behance_img_3_1768301329920.jpg",
+          "/attached_assets/behance_img_4_1768301329921.jpg",
+          "/attached_assets/behance_img_5_1768301329922.jpg"
+        ]
+      },
+      {
         title: "Grace Church Media",
         description: "Graphic design and media assets for Grace Church.",
         type: "graphic",
