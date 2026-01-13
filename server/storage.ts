@@ -83,13 +83,19 @@ export class MemStorage implements IStorage {
       },
       {
         title: "Mkholo Logo",
-        description: "Branding and logo design for Mkholo.",
+        description: "Corporate identity for Mkholo HR & Labor Consulting. A professional and authoritative brand system that communicates reliability and human-centric expertise through structured iconography and a warm corporate palette.",
         type: "graphic",
-        mediaUrl: "/images/projects/mkholo-logo.png",
-        thumbnailUrl: "/images/projects/mkholo-logo.png",
+        mediaUrl: "/attached_assets/da1195130432335.61802b76c024b_1768294046373.png",
+        thumbnailUrl: "/attached_assets/da1195130432335.61802b76c024b_1768294046373.png",
         featured: true,
         tags: ["Logos"],
-        gallery: ["/images/projects/mkholo-logo.png"]
+        gallery: [
+          "/attached_assets/da1195130432335.61802b76c024b_1768294046373.png",
+          "/attached_assets/3bbe7d130432335.61802b76c17c6_1768294046374.webp",
+          "/attached_assets/07f216130432335.61802b76bfc74_1768294046375.webp",
+          "/attached_assets/063bd5130432335.61802b76c1087_1768294046378.webp",
+          "/attached_assets/0613ba130432335.61802b76c0973_1768294046381.webp"
+        ]
       },
       {
         title: "Godfidence Logo",
