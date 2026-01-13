@@ -29,7 +29,7 @@ export function PageHero({
           loop
           muted
           playsInline
-          className={`w-full h-full object-cover object-bottom ${darkText ? 'opacity-100' : 'opacity-60'}`}
+          className={`w-full h-full object-cover object-center ${darkText ? 'opacity-100' : 'opacity-60'}`}
         >
           <source src={videoSrc} type="video/mp4" />
         </video>
