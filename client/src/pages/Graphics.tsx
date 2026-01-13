@@ -276,12 +276,30 @@ export default function Graphics() {
         </section>
 
         {/* WHERE IT ALL BEGAN - CHURCH */}
-        <section id="where-it-all-began" className="space-y-12">
+        <section id="where-it-all-began" className="space-y-12 pb-20">
           <div className="text-left space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase">WHERE IT ALL BEGAN - CHURCH</h2>
             <div className="w-24 h-1 bg-[#4db300]" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <p className="text-xl md:text-2xl text-white/70 leading-relaxed font-light">
+                With the onslaught of the novel coronavirus, my role as my church's graphic designer really had it in for me. 
+                To remedy this, a need was realized for graphics and social media content.
+              </p>
+            </div>
+            
+            <div className="rounded-xl overflow-hidden border border-white/10 bg-white/5 shadow-2xl hover-elevate transition-all duration-500">
+              <img 
+                src="/attached_assets/Church@Home_1764787849253_1768301139380.png" 
+                alt="Church@Home Graphic Design"
+                className="w-full h-auto block"
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-12">
             {!isLoading && projects?.filter(p => p.tags?.includes("Church")).map((project, index) => (
               <ProjectCard key={project.id} project={project} index={index} />
             ))}
