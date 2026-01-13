@@ -78,10 +78,10 @@ export default function VideoEdits() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div className="space-y-12">
               <div className="aspect-video rounded-xl overflow-hidden shadow-xl hover-elevate transition-all duration-500 bg-black">
-                <video src="/attached_assets/website_makes_v_journey_teaser_1768047856232.mp4" controls className="w-full h-full object-cover" />
+                <video src="/attached_assets/edgars3_1768304970705.mp4" controls className="w-full h-full object-cover" />
               </div>
               <div className="aspect-video rounded-xl overflow-hidden shadow-xl hover-elevate transition-all duration-500 bg-black">
-                <video src="/attached_assets/website_makes_v_journey_001_1768047856233.mp4" controls className="w-full h-full object-cover" />
+                <video src="/attached_assets/Perfume_ASMR_1768304970707.mp4" controls className="w-full h-full object-cover" />
               </div>
             </div>
 
