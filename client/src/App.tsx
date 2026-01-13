@@ -6,8 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 
 import Home from "@/pages/Home";
 import Graphics from "@/pages/Graphics";
-import Video from "@/pages/Video";
-import Music from "@/pages/Music";
+import VideoEdits from "@/pages/VideoEdits";
 import About from "@/pages/About";
 import NotFound from "@/pages/not-found";
 
@@ -16,8 +15,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/graphics" component={Graphics} />
-      <Route path="/video" component={Video} />
-      <Route path="/music" component={Music} />
+      <Route path="/video" component={VideoEdits} />
       <Route path="/about" component={About} />
       <Route component={NotFound} />
     </Switch>

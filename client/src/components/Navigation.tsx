@@ -7,8 +7,7 @@ import { useState } from "react";
 const NAV_ITEMS = [
   { href: "/", label: "Home" },
   { href: "/graphics", label: "Graphics" },
-  { href: "/video", label: "Video" },
-  { href: "/music", label: "Music" },
+  { href: "/video", label: "Video Edits" },
 ];
 
 import amsLogoDark from "@assets/AMS_LogoTransparent_1768048925068.png";
