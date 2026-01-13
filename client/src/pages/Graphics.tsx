@@ -34,7 +34,7 @@ export default function Graphics() {
   const hoodiesProject = projects?.find(p => p.title === "WeThinkCode Graduation Hoodies");
 
   return (
-    <div className="min-h-screen bg-[#1a1a1a] text-white">
+    <div className="min-h-screen bg-[#1a1a1a] text-white font-display">
       <Navigation />
       
       <PageHero 
@@ -50,7 +50,7 @@ export default function Graphics() {
             <button
               key={tag.id}
               onClick={() => scrollToSection(tag.id)}
-              className="px-8 py-3 rounded-full border-2 border-black/20 text-black hover:border-black/60 transition-all duration-300 text-[10px] tracking-widest uppercase font-medium"
+              className="px-8 py-3 rounded-full border-2 border-black/20 text-black hover:border-black/60 transition-all duration-300 text-[10px] tracking-widest uppercase font-medium font-display"
             >
               {tag.label}
             </button>
@@ -62,7 +62,7 @@ export default function Graphics() {
         {/* LOGOS AND BRANDS */}
         <section id="logos-and-brands" className="space-y-12">
           <div className="text-left space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase">LOGOS AND BRANDS</h2>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase font-display">LOGOS AND BRANDS</h2>
             <div className="w-24 h-1 bg-[#4db300]" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -86,7 +86,7 @@ export default function Graphics() {
         {/* WETHINKCODE_ CONTENT CLUB */}
         <section id="wethinkcode-club" className="space-y-12">
           <div className="text-left space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase">WETHINKCODE_ CONTENT CLUB</h2>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase font-display">WETHINKCODE_ CONTENT CLUB</h2>
             <div className="w-24 h-1 bg-[#4db300]" />
           </div>
           
@@ -249,7 +249,7 @@ export default function Graphics() {
         {/* LOGO REDRAW/REFRESH */}
         <section id="logo-redraw" className="space-y-12">
           <div className="text-left space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase">LOGO REDRAW/REFRESH</h2>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase font-display">LOGO REDRAW/REFRESH</h2>
             <div className="w-24 h-1 bg-[#4db300]" />
           </div>
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -279,7 +279,7 @@ export default function Graphics() {
         {/* WHERE IT ALL BEGAN - CHURCH */}
         <section id="where-it-all-began" className="space-y-12 pb-20">
           <div className="text-left space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase">WHERE IT ALL BEGAN - CHURCH</h2>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase font-display">WHERE IT ALL BEGAN - CHURCH</h2>
             <div className="w-24 h-1 bg-[#4db300]" />
           </div>
           

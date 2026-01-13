@@ -14,7 +14,7 @@ export default function VideoEdits() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen bg-white text-black font-display">
       <Navigation />
       
       <PageHero 
@@ -29,7 +29,7 @@ export default function VideoEdits() {
       <main className="container mx-auto px-6 py-24 max-w-7xl space-y-24">
         <section className="space-y-16">
           <div className="text-center space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase">My latest work in the real world</h2>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase font-display">My latest work in the real world</h2>
             <div className="w-24 h-1 bg-[#4db300] mx-auto" />
           </div>
 
@@ -71,19 +71,21 @@ export default function VideoEdits() {
 
         <section className="space-y-16">
           <div className="text-center space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase">Some older work…</h2>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase font-display">Some older work…</h2>
             <div className="w-24 h-1 bg-[#4db300] mx-auto" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div className="grid grid-cols-2 gap-6">
               <div className="aspect-[9/16] rounded-xl overflow-hidden shadow-xl hover-elevate transition-all duration-500 bg-black">
-                <video src="/attached_assets/edgars3_1768304970705.mp4" controls className="w-full h-full object-cover">
+                <video controls className="w-full h-full object-cover">
+                  <source src="/attached_assets/edgars3_1768304970705.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div className="aspect-[9/16] rounded-xl overflow-hidden shadow-xl hover-elevate transition-all duration-500 bg-black">
-                <video src="/attached_assets/Perfume_ASMR_1768304970707.mp4" controls className="w-full h-full object-cover">
+                <video controls className="w-full h-full object-cover">
+                  <source src="/attached_assets/Perfume_ASMR_1768304970707.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>

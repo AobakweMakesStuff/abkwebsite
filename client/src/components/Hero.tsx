@@ -81,11 +81,6 @@ export function Hero() {
             AOBAKWE MAKES VIDEO EDITS
           </button>
         </Link>
-        <Link href="/music" className="flex-1">
-          <button className="w-full py-4 px-6 border-2 border-white/20 rounded-full hover:bg-white hover:text-black transition-all duration-300 text-[10px] tracking-widest uppercase font-medium">
-            AOBAKWE MAKES MUSIC
-          </button>
-        </Link>
       </div>
     </section>
   );
