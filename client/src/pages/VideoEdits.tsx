@@ -68,6 +68,49 @@ export default function VideoEdits() {
             </div>
           </div>
         </section>
+
+        <section className="space-y-16">
+          <div className="text-center space-y-4">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase">Some older work…</h2>
+            <div className="w-24 h-1 bg-[#4db300] mx-auto" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            <div className="space-y-12">
+              <div className="aspect-video rounded-xl overflow-hidden shadow-xl hover-elevate transition-all duration-500 bg-black">
+                <video src="/attached_assets/website_makes_v_journey_teaser_1768047856232.mp4" controls className="w-full h-full object-cover" />
+              </div>
+              <div className="aspect-video rounded-xl overflow-hidden shadow-xl hover-elevate transition-all duration-500 bg-black">
+                <video src="/attached_assets/website_makes_v_journey_001_1768047856233.mp4" controls className="w-full h-full object-cover" />
+              </div>
+            </div>
+
+            <div className="space-y-12">
+              <div className="aspect-video rounded-xl overflow-hidden shadow-xl hover-elevate transition-all duration-500 bg-black">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/Wh0lUHfxWX0"
+                  title="ADMIT IT! We are ALL tired."
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="aspect-video rounded-xl overflow-hidden shadow-xl hover-elevate transition-all duration-500 bg-black">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/K3ZbnviPRPM"
+                  title="MNCV VLOG: Spend A Chilled Weekend With Us 🤪 | Vax Shots, Almost Getting Arrested At Menlyn, Brunch"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
       <Footer />
