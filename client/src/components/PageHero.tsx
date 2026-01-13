@@ -8,11 +8,20 @@ interface PageHeroProps {
   children?: ReactNode;
   showGradient?: boolean;
   darkText?: boolean;
+  className?: string;
 }
 
-export function PageHero({ videoSrc, title, description, children, showGradient = true, darkText = false }: PageHeroProps) {
+export function PageHero({ 
+  videoSrc, 
+  title, 
+  description, 
+  children, 
+  showGradient = true, 
+  darkText = false,
+  className = "h-[60vh] md:h-[75vh]"
+}: PageHeroProps) {
   return (
-    <section className="relative h-[60vh] md:h-[75vh] flex flex-col items-center justify-center overflow-hidden bg-white text-white">
+    <section className={`relative flex flex-col items-center justify-center overflow-hidden bg-white text-white ${className}`}>
       {/* Video Background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <video
