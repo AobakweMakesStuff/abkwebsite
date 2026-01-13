@@ -32,6 +32,7 @@ export default function Graphics() {
 
   const wtcProject = projects?.find(p => p.title === "WeThinkCode Branding");
   const socialProject = projects?.find(p => p.title === "WeThinkCode Social Media");
+  const hoodiesProject = projects?.find(p => p.title === "WeThinkCode Graduation Hoodies");
 
   return (
     <div className="min-h-screen bg-[#1a1a1a] text-white">
@@ -154,6 +155,54 @@ export default function Graphics() {
               <button 
                 onClick={() => {
                   const el = document.getElementById('social-carousel');
+                  if (el) el.scrollBy({ left: el.offsetWidth * 0.5, behavior: 'smooth' });
+                }}
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center text-white hover:bg-black/60 transition-all z-20"
+                aria-label="Next slide"
+              >
+                <ChevronRight className="w-8 h-8" />
+              </button>
+            </div>
+          </section>
+        )}
+
+        {/* GRADUATION HOODIES */}
+        {!isLoading && hoodiesProject && (
+          <section id="graduation-hoodies" className="relative group">
+            <div className="relative overflow-hidden">
+              <div 
+                id="hoodies-carousel"
+                className="flex items-stretch gap-2 px-12 overflow-x-auto snap-x snap-mandatory no-scrollbar scroll-smooth"
+              >
+                {hoodiesProject.gallery?.map((img, idx) => (
+                  <div 
+                    key={idx} 
+                    className="min-w-[85%] md:min-w-[60%] lg:min-w-[50%] snap-center overflow-hidden transition-all duration-500"
+                  >
+                    <img 
+                      src={img} 
+                      alt={`Hoodie Design ${idx + 1}`}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                ))}
+              </div>
+              
+              {/* Manual navigation arrows */}
+              <button 
+                onClick={() => {
+                  const el = document.getElementById('hoodies-carousel');
+                  if (el) el.scrollBy({ left: -el.offsetWidth * 0.5, behavior: 'smooth' });
+                }}
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center text-white hover:bg-black/60 transition-all z-20"
+                aria-label="Previous slide"
+              >
+                <ChevronLeft className="w-8 h-8" />
+              </button>
+              
+              <button 
+                onClick={() => {
+                  const el = document.getElementById('hoodies-carousel');
                   if (el) el.scrollBy({ left: el.offsetWidth * 0.5, behavior: 'smooth' });
                 }}
                 className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center text-white hover:bg-black/60 transition-all z-20"

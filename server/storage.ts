@@ -149,6 +149,21 @@ export class MemStorage implements IStorage {
         ]
       },
       {
+        title: "WeThinkCode Graduation Hoodies",
+        description: "Apparel design for WeThinkCode_ Graduation 2022. Featured custom typography and circuit-inspired graphics reflecting the academy's tech identity.",
+        type: "graphic",
+        mediaUrl: "/attached_assets/All_Sides_1768297625689.jpg",
+        thumbnailUrl: "/attached_assets/All_Sides_1768297625689.jpg",
+        featured: false,
+        tags: ["Merch"],
+        gallery: [
+          "/attached_assets/All_Sides_1768297625689.jpg",
+          "/attached_assets/Grad_Hoodies_Drafts-images-1_1768297625686.jpg",
+          "/attached_assets/Grad_Hoodies_Drafts-images-2_1768297625687.jpg",
+          "/attached_assets/Grad_Hoodies_Drafts-images-3_1768297625688.jpg"
+        ]
+      },
+      {
         title: "Grace Church Media",
         description: "Graphic design and media assets for Grace Church.",
         type: "graphic",
