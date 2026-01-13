@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { PageHero } from "@/components/PageHero";
 import videoEditsVideo from "@assets/website_makes_video_edits_1768047856234.mp4";
 
-export default function Video() {
+export default function VideoEdits() {
   const { data: projects, isLoading } = useProjects();
   const videoProjects = projects?.filter(p => p.type === "video") || [];
 
@@ -18,7 +18,8 @@ export default function Video() {
       <PageHero 
         videoSrc={videoEditsVideo}
         title="Video Edits"
-        description="Motion graphics, editing, and storytelling through the lens. Bringing stories to life with dynamic movement and rhythmic pacing."
+        description="I’ve always had an on-and-off relationship with editing…maybe because it often takes so much time and effort to end up with a video shorter than the duration it took to create😅 The one thing you can count on is that it’s always worth the effort🤭"
+        className="min-h-0 pt-32 pb-12"
       />
 
       <main className="container mx-auto px-6 py-20 max-w-7xl">
