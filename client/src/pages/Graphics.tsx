@@ -113,6 +113,39 @@ export default function Graphics() {
               <p className="text-muted-foreground">No branding projects found.</p>
             </div>
           )}
+
+          {/* SOCIAL MEDIA SLIDESHOW */}
+          {!isLoading && wtcProject && (
+            <div className="space-y-8 pt-12 border-t border-white/5">
+              <div className="max-w-2xl">
+                <h3 className="text-xl font-bold uppercase tracking-wider text-[#66ff00]">LinkedIn Profile Mockups</h3>
+                <p className="text-gray-400 mt-2">
+                  Visualising the brand presence on professional social platforms.
+                </p>
+              </div>
+              <div className="relative group rounded-xl overflow-hidden bg-white/5 border border-white/10 aspect-[3/2] max-w-4xl mx-auto">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-full h-full flex overflow-x-auto snap-x snap-mandatory no-scrollbar">
+                    {wtcProject.gallery?.slice(-5).map((img, idx) => (
+                      <div key={idx} className="min-w-full h-full snap-center flex items-center justify-center p-8">
+                        <img 
+                          src={img} 
+                          alt={`LinkedIn Mockup ${idx + 1}`}
+                          className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                {/* Visual indicator for scrolling */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                  {wtcProject.gallery?.slice(-5).map((_, idx) => (
+                    <div key={idx} className="w-1.5 h-1.5 rounded-full bg-white/20" />
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
         </section>
 
         {/* LOGO REDRAW/REFRESH */}

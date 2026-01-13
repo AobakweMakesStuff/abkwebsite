@@ -129,7 +129,12 @@ export class MemStorage implements IStorage {
           "/attached_assets/temp20251203-25969-18xgsho_1768295368971.png",
           "/attached_assets/ai-created-mockup-featuring-a-person-holding-a-poster-in-the-s_1768295437217.png",
           "/attached_assets/cert1_1768295458288.png",
-          "/attached_assets/cert2_1768295458289.png"
+          "/attached_assets/cert2_1768295458289.png",
+          "/attached_assets/1722569719027-d36ae69c-6c04-4298-9ba2-ed2b32af8a39_1_1768296253062.jpg",
+          "/attached_assets/1722569719027-d36ae69c-6c04-4298-9ba2-ed2b32af8a39_2_1768296253063.jpg",
+          "/attached_assets/1722569719027-d36ae69c-6c04-4298-9ba2-ed2b32af8a39_3_1768296253064.jpg",
+          "/attached_assets/1722569719027-d36ae69c-6c04-4298-9ba2-ed2b32af8a39_4_1768296253066.jpg",
+          "/attached_assets/1722569719027-d36ae69c-6c04-4298-9ba2-ed2b32af8a39_5_1768296253067.jpg"
         ]
       },
       {
