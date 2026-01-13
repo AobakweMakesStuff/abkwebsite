@@ -17,7 +17,6 @@ export default function Graphics() {
   const tags = [
     { label: "Logos", id: "logos-and-brands" },
     { label: "WeThinkCode_", id: "wethinkcode-club" },
-    { label: "Social Media", id: "social-media-mockups" },
     { label: "Logo Redraws", id: "logo-redraw" },
     { label: "Church", id: "where-it-all-began" }
   ];
@@ -252,9 +251,23 @@ export default function Graphics() {
             <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase">LOGO REDRAW/REFRESH</h2>
             <div className="w-24 h-1 bg-[#4db300]" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              "/attached_assets/JPG_official_logo_1768299944820.jpg",
+              "/attached_assets/JPG_logo_white_background_1768299944819.jpg",
+              "/attached_assets/JPG_white_logo_1768299944821.jpg",
+              "/attached_assets/JPG_black_logo_1768299944818.jpg"
+            ].map((img, index) => (
+              <div key={index} className="rounded-lg overflow-hidden border border-white/5 bg-white/5 hover-elevate transition-all duration-500">
+                <img 
+                  src={img} 
+                  alt={`Logo Redraw ${index + 1}`}
+                  className="w-full h-auto block"
+                />
+              </div>
+            ))}
             {!isLoading && projects?.filter(p => p.tags?.includes("Logo Redraws")).map((project, index) => (
-              <ProjectCard key={project.id} project={project} index={index} />
+              <ProjectCard key={project.id} project={project} index={index + 4} />
             ))}
           </div>
         </section>
