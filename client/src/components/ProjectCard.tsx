@@ -103,10 +103,10 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         </motion.div>
       </DialogTrigger>
 
-      <DialogContent className="max-w-4xl bg-[#121212] border-white/10 p-0 overflow-hidden sm:rounded-2xl">
+      <DialogContent className="max-w-5xl bg-[#121212] border-white/10 p-0 overflow-hidden sm:rounded-2xl">
         <div className="flex flex-col">
           {/* Media Player / Gallery View */}
-          <div className="w-full bg-black aspect-video relative flex items-center justify-center group/modal">
+          <div className="w-full bg-black aspect-video md:aspect-[21/9] relative flex items-center justify-center group/modal overflow-hidden">
             {project.type === "video" || project.type === "music" ? (
               <ReactPlayer 
                 url={project.mediaUrl} 
@@ -114,21 +114,25 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 height="100%" 
                 controls
                 playing={false}
-                light={project.thumbnailUrl} // Use thumbnail as preview
+                light={project.thumbnailUrl || undefined} // Use thumbnail as preview
               />
             ) : (
               <div className="w-full h-full relative overflow-hidden bg-black/50">
                 <AnimatePresence mode="wait">
-                  <motion.img 
+                  <motion.div
                     key={currentImageIndex}
-                    src={galleryImages[currentImageIndex]} 
-                    alt={`${project.title} - Image ${currentImageIndex + 1}`} 
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="w-full h-full object-contain mx-auto"
-                  />
+                    className="w-full h-full flex items-center justify-center p-4 md:p-8"
+                  >
+                    <img 
+                      src={galleryImages[currentImageIndex]} 
+                      alt={`${project.title} - Image ${currentImageIndex + 1}`} 
+                      className="max-w-full max-h-full object-contain shadow-2xl"
+                    />
+                  </motion.div>
                 </AnimatePresence>
 
                 {galleryImages.length > 1 && (
@@ -136,26 +140,30 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                     <Button
                       variant="ghost"
                       size="icon"
-                      className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-[#66ff00] hover:text-black rounded-full text-white opacity-0 group-hover/modal:opacity-100 transition-opacity"
+                      className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-[#66ff00] hover:text-black rounded-full text-white opacity-0 group-hover/modal:opacity-100 transition-opacity z-10 h-12 w-12"
                       onClick={prevImage}
                     >
-                      <ChevronLeft className="w-6 h-6" />
+                      <ChevronLeft className="w-8 h-8" />
                     </Button>
                     <Button
                       variant="ghost"
                       size="icon"
-                      className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-[#66ff00] hover:text-black rounded-full text-white opacity-0 group-hover/modal:opacity-100 transition-opacity"
+                      className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-[#66ff00] hover:text-black rounded-full text-white opacity-0 group-hover/modal:opacity-100 transition-opacity z-10 h-12 w-12"
                       onClick={nextImage}
                     >
-                      <ChevronRight className="w-6 h-6" />
+                      <ChevronRight className="w-8 h-8" />
                     </Button>
                     
-                    {/* Progress dots */}
-                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                    {/* Progress indicators */}
+                    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-10">
                       {galleryImages.map((_, i) => (
-                        <div 
+                        <button 
                           key={i}
-                          className={`w-1.5 h-1.5 rounded-full transition-colors ${i === currentImageIndex ? 'bg-[#66ff00]' : 'bg-white/30'}`}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setCurrentImageIndex(i);
+                          }}
+                          className={`w-2 h-2 rounded-full transition-all duration-300 ${i === currentImageIndex ? 'bg-[#66ff00] w-6' : 'bg-white/30 hover:bg-white/50'}`}
                         />
                       ))}
                     </div>
