@@ -119,38 +119,48 @@ export default function Graphics() {
 
         {/* SOCIAL MEDIA MOCKUPS */}
         {!isLoading && socialProject && (
-          <section id="social-media-mockups" className="space-y-12">
-            <div className="text-left space-y-4">
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase">SOCIAL MEDIA MOCKUPS</h2>
-              <div className="w-24 h-1 bg-[#4db300]" />
-            </div>
-            <div className="relative group overflow-hidden py-12">
-              <div className="flex items-center gap-4 px-12 overflow-x-auto snap-x snap-mandatory no-scrollbar">
+          <section id="social-media-mockups" className="relative group">
+            <div className="relative overflow-hidden">
+              <div 
+                id="social-carousel"
+                className="flex items-stretch gap-2 px-12 overflow-x-auto snap-x snap-mandatory no-scrollbar scroll-smooth"
+              >
                 {socialProject.gallery?.map((img, idx) => (
                   <div 
                     key={idx} 
-                    className="min-w-[70%] md:min-w-[45%] lg:min-w-[35%] aspect-[3/2] snap-center rounded-xl overflow-hidden border border-white/10 bg-white/5 shadow-2xl transition-all duration-500 hover:scale-[1.02]"
+                    className="min-w-[85%] md:min-w-[60%] lg:min-w-[50%] snap-center overflow-hidden transition-all duration-500"
                   >
                     <img 
                       src={img} 
                       alt={`Social Media Mockup ${idx + 1}`}
-                      className="w-full h-full object-contain p-4"
+                      className="w-full h-full object-contain"
                     />
                   </div>
                 ))}
               </div>
               
-              {/* Manual navigation hints */}
-              <div className="absolute top-1/2 -translate-y-1/2 left-4 z-10">
-                <button className="w-10 h-10 rounded-full bg-black/40 border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:bg-black/60 transition-all pointer-events-none opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto">
-                  <ChevronLeft className="w-6 h-6" />
-                </button>
-              </div>
-              <div className="absolute top-1/2 -translate-y-1/2 right-4 z-10">
-                <button className="w-10 h-10 rounded-full bg-black/40 border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:bg-black/60 transition-all pointer-events-none opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto">
-                  <ChevronRight className="w-6 h-6" />
-                </button>
-              </div>
+              {/* Manual navigation arrows */}
+              <button 
+                onClick={() => {
+                  const el = document.getElementById('social-carousel');
+                  if (el) el.scrollBy({ left: -el.offsetWidth * 0.5, behavior: 'smooth' });
+                }}
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center text-white hover:bg-black/60 transition-all z-20"
+                aria-label="Previous slide"
+              >
+                <ChevronLeft className="w-8 h-8" />
+              </button>
+              
+              <button 
+                onClick={() => {
+                  const el = document.getElementById('social-carousel');
+                  if (el) el.scrollBy({ left: el.offsetWidth * 0.5, behavior: 'smooth' });
+                }}
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center text-white hover:bg-black/60 transition-all z-20"
+                aria-label="Next slide"
+              >
+                <ChevronRight className="w-8 h-8" />
+              </button>
             </div>
           </section>
         )}
