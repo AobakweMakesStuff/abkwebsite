@@ -256,7 +256,10 @@ export default function Graphics() {
               "/attached_assets/JPG_official_logo_1768299944820.jpg",
               "/attached_assets/JPG_logo_white_background_1768299944819.jpg",
               "/attached_assets/JPG_white_logo_1768299944821.jpg",
-              "/attached_assets/JPG_black_logo_1768299944818.jpg"
+              "/attached_assets/JPG_black_logo_1768299944818.jpg",
+              "/attached_assets/1B386CFF_1768300369446.jpg",
+              "/attached_assets/D546C144_1768300425427.jpg",
+              "/attached_assets/JPEG_Logo2_REDUCE_1768300493465.jpg"
             ].map((img, index) => (
               <div key={index} className="rounded-lg overflow-hidden border border-white/5 bg-white/5 hover-elevate transition-all duration-500">
                 <img 
@@ -267,7 +270,7 @@ export default function Graphics() {
               </div>
             ))}
             {!isLoading && projects?.filter(p => p.tags?.includes("Logo Redraws")).map((project, index) => (
-              <ProjectCard key={project.id} project={project} index={index + 4} />
+              <ProjectCard key={project.id} project={project} index={index + 7} />
             ))}
           </div>
         </section>
