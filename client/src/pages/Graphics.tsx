@@ -2,7 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { ProjectCard } from "@/components/ProjectCard";
 import { useProjects } from "@/hooks/use-projects";
-import { Loader2 } from "lucide-react";
+import { Loader2, ChevronLeft, ChevronRight } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import graphicsVideo from "@assets/website_makes_graphics_1768047856231.mp4";
 
@@ -31,6 +31,7 @@ export default function Graphics() {
   ];
 
   const wtcProject = projects?.find(p => p.title === "WeThinkCode Branding");
+  const socialProject = projects?.find(p => p.title === "WeThinkCode Social Media");
 
   return (
     <div className="min-h-screen bg-[#1a1a1a] text-white">
@@ -117,38 +118,38 @@ export default function Graphics() {
         </section>
 
         {/* SOCIAL MEDIA MOCKUPS */}
-        {!isLoading && wtcProject && (
+        {!isLoading && socialProject && (
           <section id="social-media-mockups" className="space-y-12">
             <div className="text-left space-y-4">
               <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase">SOCIAL MEDIA MOCKUPS</h2>
               <div className="w-24 h-1 bg-[#4db300]" />
             </div>
-            <div className="space-y-8">
-              <div className="max-w-2xl">
-                <p className="text-gray-400 text-lg leading-relaxed">
-                  Visualising the brand presence on professional social platforms like LinkedIn.
-                </p>
-              </div>
-              <div className="relative group rounded-xl overflow-hidden bg-white/5 border border-white/10 aspect-[3/2] max-w-4xl mx-auto">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-full h-full flex overflow-x-auto snap-x snap-mandatory no-scrollbar">
-                    {wtcProject.gallery?.slice(-5).map((img, idx) => (
-                      <div key={idx} className="min-w-full h-full snap-center flex items-center justify-center p-8">
-                        <img 
-                          src={img} 
-                          alt={`LinkedIn Mockup ${idx + 1}`}
-                          className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
-                        />
-                      </div>
-                    ))}
+            <div className="relative group overflow-hidden py-12">
+              <div className="flex items-center gap-4 px-12 overflow-x-auto snap-x snap-mandatory no-scrollbar">
+                {socialProject.gallery?.map((img, idx) => (
+                  <div 
+                    key={idx} 
+                    className="min-w-[70%] md:min-w-[45%] lg:min-w-[35%] aspect-[3/2] snap-center rounded-xl overflow-hidden border border-white/10 bg-white/5 shadow-2xl transition-all duration-500 hover:scale-[1.02]"
+                  >
+                    <img 
+                      src={img} 
+                      alt={`Social Media Mockup ${idx + 1}`}
+                      className="w-full h-full object-contain p-4"
+                    />
                   </div>
-                </div>
-                {/* Visual indicator for scrolling */}
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-                  {wtcProject.gallery?.slice(-5).map((_, idx) => (
-                    <div key={idx} className="w-1.5 h-1.5 rounded-full bg-white/20" />
-                  ))}
-                </div>
+                ))}
+              </div>
+              
+              {/* Manual navigation hints */}
+              <div className="absolute top-1/2 -translate-y-1/2 left-4 z-10">
+                <button className="w-10 h-10 rounded-full bg-black/40 border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:bg-black/60 transition-all pointer-events-none opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto">
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+              </div>
+              <div className="absolute top-1/2 -translate-y-1/2 right-4 z-10">
+                <button className="w-10 h-10 rounded-full bg-black/40 border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:bg-black/60 transition-all pointer-events-none opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto">
+                  <ChevronRight className="w-6 h-6" />
+                </button>
               </div>
             </div>
           </section>
