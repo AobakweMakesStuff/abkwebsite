@@ -114,13 +114,23 @@ export class MemStorage implements IStorage {
       },
       {
         title: "WeThinkCode Branding",
-        description: "Visual identity and design elements for WeThinkCode.",
+        description: "Comprehensive branding and publication design for WeThinkCode_. This project involved creating a cohesive visual language across annual reports, certificates, and marketing collateral, focusing on a tech-forward and accessible aesthetic.",
         type: "graphic",
-        mediaUrl: "/images/projects/wethinkcode-design.png",
-        thumbnailUrl: "/images/projects/wethinkcode-design.png",
+        mediaUrl: "/attached_assets/mediamodifier_image_1768295368967.jpeg",
+        thumbnailUrl: "/attached_assets/mediamodifier_image_1768295368967.jpeg",
         featured: true,
-        tags: ["WeThinkCode_"],
-        gallery: ["/images/projects/wethinkcode-design.png"]
+        tags: ["Branding"],
+        gallery: [
+          "/attached_assets/mediamodifier_image_1768295368967.jpeg",
+          "/attached_assets/temp20251203-12204-pbf42l_1768295368968.png",
+          "/attached_assets/temp20251203-14134-47ggb_1768295368969.png",
+          "/attached_assets/temp20251203-18848-e9f4zd_1768295368969.png",
+          "/attached_assets/temp20251203-25913-1kn6vz2_1768295368970.png",
+          "/attached_assets/temp20251203-25969-18xgsho_1768295368971.png",
+          "/attached_assets/ai-created-mockup-featuring-a-person-holding-a-poster-in-the-s_1768295437217.png",
+          "/attached_assets/cert1_1768295458288.png",
+          "/attached_assets/cert2_1768295458289.png"
+        ]
       },
       {
         title: "Grace Church Media",

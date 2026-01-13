@@ -29,6 +29,8 @@ export default function Graphics() {
     "Godfidence Logo"
   ];
 
+  const wtcProject = projects?.find(p => p.title === "WeThinkCode Branding");
+
   return (
     <div className="min-h-screen bg-[#1a1a1a] text-white">
       <Navigation />
@@ -84,11 +86,33 @@ export default function Graphics() {
             <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase">WETHINKCODE_ CONTENT CLUB</h2>
             <div className="w-24 h-1 bg-[#4db300]" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {!isLoading && projects?.filter(p => p.tags?.includes("WeThinkCode_")).map((project, index) => (
-              <ProjectCard key={project.id} project={project} index={index} />
-            ))}
-          </div>
+          
+          {isLoading ? (
+            <Loader2 className="w-10 h-10 animate-spin text-[#66ff00] mx-auto" />
+          ) : wtcProject ? (
+            <div className="space-y-12">
+              <div className="max-w-2xl">
+                <p className="text-gray-400 text-lg leading-relaxed">
+                  {wtcProject.description}
+                </p>
+              </div>
+              <div className="columns-1 md:columns-2 gap-8 space-y-8">
+                {wtcProject.gallery?.map((img, idx) => (
+                  <div key={idx} className="break-inside-avoid rounded-lg overflow-hidden border border-white/5 bg-white/5 hover-elevate transition-all duration-500">
+                    <img 
+                      src={img} 
+                      alt={`WeThinkCode Branding ${idx + 1}`}
+                      className="w-full h-auto object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <div className="p-12 border border-dashed border-muted rounded-lg text-center">
+              <p className="text-muted-foreground">No branding projects found.</p>
+            </div>
+          )}
         </section>
 
         {/* LOGO REDRAW/REFRESH */}
