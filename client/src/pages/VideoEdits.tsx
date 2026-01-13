@@ -42,7 +42,7 @@ export default function VideoEdits() {
                 height="600" 
                 frameBorder="0" 
                 scrolling="no" 
-                allowTransparency={true}
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 className="mx-auto"
               ></iframe>
             </div>
@@ -78,10 +78,14 @@ export default function VideoEdits() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div className="grid grid-cols-2 gap-6">
               <div className="aspect-[9/16] rounded-xl overflow-hidden shadow-xl hover-elevate transition-all duration-500 bg-black">
-                <video src="/attached_assets/edgars3_1768304970705.mp4" controls className="w-full h-full object-cover" />
+                <video src="/attached_assets/edgars3_1768304970705.mp4" controls className="w-full h-full object-cover">
+                  Your browser does not support the video tag.
+                </video>
               </div>
               <div className="aspect-[9/16] rounded-xl overflow-hidden shadow-xl hover-elevate transition-all duration-500 bg-black">
-                <video src="/attached_assets/Perfume_ASMR_1768304970707.mp4" controls className="w-full h-full object-cover" />
+                <video src="/attached_assets/Perfume_ASMR_1768304970707.mp4" controls className="w-full h-full object-cover">
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
 
