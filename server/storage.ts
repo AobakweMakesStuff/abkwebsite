@@ -99,13 +99,18 @@ export class MemStorage implements IStorage {
       },
       {
         title: "Godfidence Logo",
-        description: "Branding and logo design for Godfidence.",
+        description: "Minimalist and bold branding for Godfidence. A modern streetwear-inspired visual identity featuring a strong circular monogram, designed for versatile application across apparel and digital media.",
         type: "graphic",
-        mediaUrl: "/images/projects/godfidence-logo.png",
-        thumbnailUrl: "/images/projects/godfidence-logo.png",
+        mediaUrl: "/attached_assets/logo1-03_1768294262000.png",
+        thumbnailUrl: "/attached_assets/logo1-03_1768294262000.png",
         featured: true,
         tags: ["Logos"],
-        gallery: ["/images/projects/godfidence-logo.png"]
+        gallery: [
+          "/attached_assets/logo1-03_1768294262000.png",
+          "/attached_assets/mockup_1768294261994.jpg",
+          "/attached_assets/transparent_logo-01_1768294261995.png",
+          "/attached_assets/different_typefaces-04_1768294261996.png"
+        ]
       },
       {
         title: "WeThinkCode Branding",
