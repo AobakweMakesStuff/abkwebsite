@@ -17,6 +17,7 @@ export default function Graphics() {
   const tags = [
     { label: "Logos", id: "logos-and-brands" },
     { label: "WeThinkCode_", id: "wethinkcode-club" },
+    { label: "Social Media", id: "social-media-mockups" },
     { label: "Logo Redraws", id: "logo-redraw" },
     { label: "Church", id: "where-it-all-began" }
   ];
@@ -113,14 +114,19 @@ export default function Graphics() {
               <p className="text-muted-foreground">No branding projects found.</p>
             </div>
           )}
+        </section>
 
-          {/* SOCIAL MEDIA SLIDESHOW */}
-          {!isLoading && wtcProject && (
-            <div className="space-y-8 pt-12 border-t border-white/5">
+        {/* SOCIAL MEDIA MOCKUPS */}
+        {!isLoading && wtcProject && (
+          <section id="social-media-mockups" className="space-y-12">
+            <div className="text-left space-y-4">
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase">SOCIAL MEDIA MOCKUPS</h2>
+              <div className="w-24 h-1 bg-[#4db300]" />
+            </div>
+            <div className="space-y-8">
               <div className="max-w-2xl">
-                <h3 className="text-xl font-bold uppercase tracking-wider text-[#66ff00]">LinkedIn Profile Mockups</h3>
-                <p className="text-gray-400 mt-2">
-                  Visualising the brand presence on professional social platforms.
+                <p className="text-gray-400 text-lg leading-relaxed">
+                  Visualising the brand presence on professional social platforms like LinkedIn.
                 </p>
               </div>
               <div className="relative group rounded-xl overflow-hidden bg-white/5 border border-white/10 aspect-[3/2] max-w-4xl mx-auto">
@@ -145,8 +151,8 @@ export default function Graphics() {
                 </div>
               </div>
             </div>
-          )}
-        </section>
+          </section>
+        )}
 
         {/* LOGO REDRAW/REFRESH */}
         <section id="logo-redraw" className="space-y-12">
