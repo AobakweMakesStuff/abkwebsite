@@ -64,13 +64,22 @@ export class MemStorage implements IStorage {
       },
       {
         title: "Grace Empowered Logo",
-        description: "Branding and logo design for Grace Empowered.",
+        description: "Comprehensive branding for Grace Empowered Church. A majestic and powerful visual identity that combines global outreach with biblical foundations, featuring gold metallic finishes across multiple brand applications.",
         type: "graphic",
-        mediaUrl: "/images/projects/grace-logo.png",
-        thumbnailUrl: "/images/projects/grace-logo.png",
+        mediaUrl: "/attached_assets/Gold_on_Red_1768293767928.png",
+        thumbnailUrl: "/attached_assets/Gold_on_Red_1768293767928.png",
         featured: true,
         tags: ["Logos"],
-        gallery: ["/images/projects/grace-logo.png"]
+        gallery: [
+          "/attached_assets/Gold_on_Red_1768293767928.png",
+          "/attached_assets/Gold_on_Black_1768293767924.png",
+          "/attached_assets/Gold_on_Purple_1768293767925.png",
+          "/attached_assets/Gold_on_White_1768293767929.png",
+          "/attached_assets/Gold_Transparent_1768293767930.png",
+          "/attached_assets/White_Logo_1768293767934.png",
+          "/attached_assets/Black_Logo_Transparent_1768293767922.png",
+          "/attached_assets/Untitled_design_1768293767933.png"
+        ]
       },
       {
         title: "Mkholo Logo",
