@@ -169,19 +169,30 @@ export default function Graphics() {
         {/* GRADUATION HOODIES */}
         {!isLoading && hoodiesProject && (
           <section id="graduation-hoodies" className="space-y-12">
+            <div className="text-left space-y-4">
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase">GRADUATION HOODIES</h2>
+              <div className="w-24 h-1 bg-[#4db300]" />
+            </div>
             <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
-              {hoodiesProject.gallery?.map((img, idx) => (
-                <div 
-                  key={idx} 
-                  className="break-inside-avoid rounded-lg overflow-hidden border border-white/5 bg-white/5 hover-elevate transition-all duration-500"
-                >
-                  <img 
-                    src={img} 
-                    alt={`Hoodie Design ${idx + 1}`}
-                    className="w-full h-auto block"
-                  />
-                </div>
-              ))}
+              {(() => {
+                const gallery = [...(hoodiesProject.gallery || [])];
+                if (gallery.length > 0) {
+                  const first = gallery.shift();
+                  if (first) gallery.push(first);
+                }
+                return gallery.map((img, idx) => (
+                  <div 
+                    key={idx} 
+                    className="break-inside-avoid rounded-lg overflow-hidden border border-white/5 bg-white/5 hover-elevate transition-all duration-500 mb-8"
+                  >
+                    <img 
+                      src={img} 
+                      alt={`Hoodie Design ${idx + 1}`}
+                      className="w-full h-auto block"
+                    />
+                  </div>
+                ));
+              })()}
             </div>
           </section>
         )}
