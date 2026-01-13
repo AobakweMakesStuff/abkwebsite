@@ -19,13 +19,31 @@ export class MemStorage implements IStorage {
     const seeds: InsertProject[] = [
       {
         title: "Amanda Hendricks Logo",
-        description: "Branding and logo design for Amanda Hendricks.",
+        description: "Branding and logo design for Amanda Hendricks Ultrasound Diagnostics. A clean, professional medical visual identity that balances clinical precision with a compassionate touch.",
         type: "graphic",
-        mediaUrl: "/images/projects/ah-logo.png",
-        thumbnailUrl: "/images/projects/ah-logo.png",
+        mediaUrl: "/attached_assets/AH_Logos2-8_1768288499340.jpg",
+        thumbnailUrl: "/attached_assets/AH_Logos2-8_1768288499340.jpg",
         featured: true,
         tags: ["Logos"],
-        gallery: ["/images/projects/ah-logo.png", "/images/projects/godfidence-logo.png"]
+        gallery: [
+          "/attached_assets/AH_Logos2-8_1768288499340.jpg",
+          "/attached_assets/d937d1204645275.66ac6a6e18002_1768288499342.jpg",
+          "/attached_assets/ed92c8204645275.66ac6a6d12029_1768288499343.jpg",
+          "/attached_assets/new_1768288499345.jpg",
+          "/attached_assets/0f0c3e204645275.66ac6a6d11857_1768288499346.jpg",
+          "/attached_assets/1a9376204645275.66ac6a6d127b2_1768288499347.jpg",
+          "/attached_assets/8e3525204645275.66ac6a6e172b2_1768288499348.jpg",
+          "/attached_assets/773618204645275.66ac6a6d1104f_1768288499349.jpg",
+          "/attached_assets/a3aabd204645275.66ac6a6e16bd8_1768288499350.jpg",
+          "/attached_assets/a6471f204645275.66ac6a6e179b2_1768288499351.jpg",
+          "/attached_assets/AH_Logos2-1_1768288499353.jpg",
+          "/attached_assets/AH_Logos2-2_1768288499354.jpg",
+          "/attached_assets/AH_Logos2-3_1768288499355.jpg",
+          "/attached_assets/AH_Logos2-4_1768288499356.jpg",
+          "/attached_assets/AH_Logos2-5_1768288499358.jpg",
+          "/attached_assets/AH_Logos2-6_1768288499359.jpg",
+          "/attached_assets/AH_Logos2-7_1768288499360.jpg"
+        ]
       },
       {
         title: "WholenessWithD Logo",
