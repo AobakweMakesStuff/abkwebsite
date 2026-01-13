@@ -180,14 +180,22 @@ export class MemStorage implements IStorage {
         ]
       },
       {
-        title: "Grace Church Media",
-        description: "Graphic design and media assets for Grace Church.",
+        title: "Potter's House Event Graphics",
+        description: "A collection of event-specific graphics for The Potter's House Community Church, including promotional material for virtual conferences, prayer meetings, youth and father's day celebrations, and marriage anniversaries. These designs focus on clear communication of event details while maintaining a vibrant and welcoming community aesthetic.",
         type: "graphic",
-        mediaUrl: "/images/projects/grace-church.png",
-        thumbnailUrl: "/images/projects/grace-church.png",
+        mediaUrl: "/attached_assets/behance_img_1_1768301463015.jpg",
+        thumbnailUrl: "/attached_assets/behance_img_1_1768301463015.jpg",
         featured: true,
         tags: ["Church"],
-        gallery: ["/images/projects/grace-church.png"]
+        gallery: [
+          "/attached_assets/behance_img_1_1768301463015.jpg",
+          "/attached_assets/behance_img_2_1768301463017.jpg",
+          "/attached_assets/behance_img_3_1768301463018.jpg",
+          "/attached_assets/behance_img_4_1768301463019.jpg",
+          "/attached_assets/behance_img_5_1768301463022.png",
+          "/attached_assets/behance_img_6_1768301463024.jpg",
+          "/attached_assets/behance_img_7_1768301463027.jpg"
+        ]
       },
       {
         title: "Cinematic Showreel 2024",
