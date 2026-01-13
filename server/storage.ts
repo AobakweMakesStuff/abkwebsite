@@ -47,13 +47,20 @@ export class MemStorage implements IStorage {
       },
       {
         title: "WholenessWithD Logo",
-        description: "Branding and logo design for WholenessWithD.",
+        description: "Branding and logo design for WholenessWithD. A sophisticated visual identity representing spiritual and personal wholeness, featuring a rich gold palette and elegant typography.",
         type: "graphic",
-        mediaUrl: "/images/projects/wholeness-logo.png",
-        thumbnailUrl: "/images/projects/wholeness-logo.png",
+        mediaUrl: "/attached_assets/FInal_logo-3_1768293572317.jpg",
+        thumbnailUrl: "/attached_assets/FInal_logo-3_1768293572317.jpg",
         featured: true,
         tags: ["Logos"],
-        gallery: ["/images/projects/wholeness-logo.png"]
+        gallery: [
+          "/attached_assets/FInal_logo-3_1768293572317.jpg",
+          "/attached_assets/FInal_logo-1_1768293572315.jpg",
+          "/attached_assets/FInal_logo-2_1768293572316.jpg",
+          "/attached_assets/Drafts_Presentation-1_1768293507917.jpg",
+          "/attached_assets/Drafts_Presentation-2_1768293507918.jpg",
+          "/attached_assets/Drafts_Presentation-3_1768293507919.jpg"
+        ]
       },
       {
         title: "Grace Empowered Logo",
