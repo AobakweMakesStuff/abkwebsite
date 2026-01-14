@@ -5,7 +5,7 @@ import amsLogo from "@assets/AMS_LogoTransparent_White_1768045691519.png";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black text-white pt-20">
+    <section className="relative min-h-screen flex flex-col items-center justify-between overflow-hidden bg-black text-white py-12 md:py-16">
       {/* Background Image Wash */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -17,18 +17,18 @@ export function Hero() {
       </div>
 
       {/* Top Logo Section */}
-      <div className="relative z-20 text-center mb-0 -mt-24 md:-mt-32">
+      <div className="relative z-20 text-center w-full">
         <img 
           src={amsLogo} 
           alt="AMS Aobakwe Makes Stuff" 
-          className="h-32 md:h-48 mx-auto object-contain mb-2"
+          className="h-32 md:h-48 mx-auto object-contain"
         />
       </div>
 
       {/* Main Content Grid */}
-      <div className="relative z-10 container max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-[1.2fr_0.6fr_1.2fr] items-center gap-12 md:gap-8 mb-4 md:mb-16">
+      <div className="relative z-10 w-full px-6 flex flex-col md:flex-row md:justify-between items-center md:items-start gap-12 md:gap-0 mt-8 md:mt-0">
         {/* Left Text */}
-        <div className="space-y-1 md:space-y-4 text-sm md:text-base font-light leading-relaxed drop-shadow-lg text-left">
+        <div className="md:max-w-xs lg:max-w-sm space-y-1 md:space-y-4 text-sm md:text-base font-light leading-relaxed drop-shadow-lg text-left md:ml-12 lg:ml-24">
           <p>Hi there!</p>
           <p>My name is Aobakwe, but most people just call me ABK :)</p>
           <p className="max-w-[320px]">
@@ -54,11 +54,11 @@ export function Hero() {
         </div>
 
         {/* Center Space - visible and taller on mobile to clear face */}
-        <div className="h-[50vh] md:h-auto md:block" />
+        <div className="h-[50vh] md:hidden" />
 
         {/* Right Text */}
-        <div className="space-y-4 md:space-y-6 text-sm md:text-base font-light leading-relaxed drop-shadow-lg text-left">
-          <p className="max-w-[450px]">
+        <div className="md:max-w-xs lg:max-w-sm space-y-4 md:space-y-6 text-sm md:text-base font-light leading-relaxed drop-shadow-lg text-left md:text-right md:mr-12 lg:mr-24">
+          <p>
             Since my teen years, I've grown in different skills and creative interests. 
             Some were just hobbies, some were entrepreneurial, and some even became career stepping stones. 
             This website is a showcase, if you will, of the things I've built and explored along the way.
@@ -70,7 +70,7 @@ export function Hero() {
       </div>
 
       {/* Bottom Navigation Buttons */}
-      <div className="relative z-20 flex flex-col md:flex-row gap-4 w-full max-w-4xl px-6 mb-8">
+      <div className="relative z-20 flex flex-col md:flex-row gap-4 w-full max-w-4xl px-6">
         <Link href="/graphics" className="flex-1">
           <button className="w-full py-4 px-6 border-2 border-white/20 rounded-full hover:bg-white hover:text-black transition-all duration-300 text-[10px] tracking-widest uppercase font-medium">
             AOBAKWE MAKES GRAPHICS
