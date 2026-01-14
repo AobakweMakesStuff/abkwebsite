@@ -5,7 +5,7 @@ import amsLogo from "@assets/AMS_LogoTransparent_White_1768045691519.png";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-between overflow-hidden bg-black text-white py-4 md:py-8">
+    <section className="relative min-h-screen flex flex-col items-center justify-between overflow-hidden bg-black text-white pt-2 pb-8 md:pt-4 md:pb-8">
       {/* Background Image Wash */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -21,7 +21,7 @@ export function Hero() {
         <img 
           src={amsLogo} 
           alt="AMS Aobakwe Makes Stuff" 
-          className="h-32 md:h-48 mx-auto object-contain"
+          className="h-24 md:h-48 mx-auto object-contain"
         />
       </div>
 
