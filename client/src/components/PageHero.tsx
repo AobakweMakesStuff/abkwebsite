@@ -23,7 +23,7 @@ export function PageHero({
 }: PageHeroProps) {
   return (
     <section className={cn(
-      "relative flex flex-col items-center justify-center overflow-hidden bg-white text-white transition-all duration-300",
+      "relative flex flex-col items-center justify-center overflow-hidden bg-white text-white transition-all duration-300 mt-20",
       className
     )}>
       {/* Video Background */}
