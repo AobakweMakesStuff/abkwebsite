@@ -217,7 +217,7 @@ export class MemStorage implements IStorage {
         title: "Perfume ASMR",
         description: "A cinematic ASMR video edit focusing on the sensory experience of luxury fragrance. Features detailed close-ups, crisp sound design, and elegant transitions.",
         type: "video",
-        mediaUrl: "/attached_assets/edgars3_1768304970705.mp4",
+        mediaUrl: "/attached_assets/Perfume_ASMR_1768370424181.mp4",
         thumbnailUrl: "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80",
         featured: true,
         tags: ["ASMR", "Editing"],
