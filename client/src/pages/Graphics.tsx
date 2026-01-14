@@ -43,14 +43,14 @@ export default function Graphics() {
         description="My graphic design journey started in my early teens, making stuff for my home church. From there I built a small business, worked on personal projects, and eventually designed at WeThinkCode_ (the software development academy I attended)."
         showGradient={false}
         darkText={true}
-        className="min-h-0 pt-32 pb-8"
+        className="min-h-0 pt-20 pb-6 md:pt-32 md:pb-8"
       >
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-3 md:gap-4">
           {tags.map((tag) => (
             <button
               key={tag.id}
               onClick={() => scrollToSection(tag.id)}
-              className="px-8 py-3 rounded-full border-2 border-black/20 text-black hover:border-black/60 transition-all duration-300 text-[10px] tracking-widest uppercase font-medium font-display"
+              className="px-6 py-2 md:px-8 md:py-3 rounded-full border-2 border-black/20 text-black hover:border-black/60 transition-all duration-300 text-[10px] tracking-widest uppercase font-medium font-display"
             >
               {tag.label}
             </button>
