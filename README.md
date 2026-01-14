@@ -25,33 +25,66 @@ A multidisciplinary creative portfolio showcasing graphics, video, and music pro
 
 To run this project on your local machine, follow these steps:
 
-1.  **Prerequisites**: Ensure you have [Node.js](https://nodejs.org/) (v18 or later) installed.
-2.  **Install Dependencies**:
+1.  **Prerequisites**:
+    - [Node.js](https://nodejs.org/) (v20 or later recommended)
+    - [NPM](https://www.npmjs.com/) (usually comes with Node.js)
+    - [Git](https://git-scm.com/) (for version control)
+    - A code editor like [VS Code](https://code.visualstudio.com/)
+
+2.  **Environment Setup**:
+    - **Replit SSH (Recommended for VS Code)**:
+        1. Open the **SSH** pane in your Replit project.
+        2. Follow the instructions to add your public SSH key.
+        3. Use the provided SSH command to connect your local VS Code to Replit using the "Remote - SSH" extension.
+    - **Clone Locally**:
+        1. Clone the repository: `git clone <your-repo-url>`
+        2. Navigate to the directory: `cd <your-project-folder>`
+
+3.  **Install Dependencies**:
     ```bash
     npm install
     ```
-3.  **Run the Application**:
+
+4.  **Run the Application**:
     ```bash
     npm run dev
     ```
-4.  **Access the Site**: Open your browser and navigate to `http://localhost:5000`.
+
+5.  **Access the Site**: Open your browser and navigate to `http://localhost:5000`.
 
 ## Deployment to GitHub Pages
 
 GitHub Pages serves static content. Since this application uses a Node.js backend for the API, you have two options for deployment:
 
 ### Option 1: Static Export (Recommended for GitHub Pages)
-If you wish to host purely on GitHub Pages, you should convert the project to a static-only site:
-1.  Move the project data from `server/storage.ts` into a static JSON file in `client/public/data/projects.json`.
-2.  Update the frontend to fetch from this JSON file instead of the `/api/projects` endpoint.
-3.  Build the static assets:
+
+GitHub Pages is a free hosting service for static sites. To use it:
+
+1.  **Migrate Data to JSON**:
+    - Move your project data from `server/storage.ts` into a static JSON file (e.g., `client/src/data/projects.json`).
+    - Update your frontend components (like `ProjectGrid.tsx`) to import this JSON file directly or fetch it using `fetch('/data/projects.json')`.
+2.  **Configure Vite**:
+    - In `vite.config.ts`, set the `base` property to your repository name (e.g., `base: '/my-portfolio/'`).
+3.  **Build the Project**:
     ```bash
     npm run build
     ```
-4.  Push the contents of the `dist/public` folder to your `gh-pages` branch.
+    This creates a `dist` folder.
+4.  **Deploy to GitHub**:
+    - You can use the `gh-pages` package:
+      ```bash
+      npm install -D gh-pages
+      ```
+    - Add these scripts to `package.json`:
+      ```json
+      "predeploy": "npm run build",
+      "deploy": "gh-pages -d dist/public"
+      ```
+    - Run: `npm run deploy`
+5.  **Enable GitHub Pages**: In your GitHub repository settings, go to **Pages** and set the source to the `gh-pages` branch.
 
 ### Option 2: Full-Stack Hosting (Alternative)
-If you require the dynamic API features, consider platforms like **Replit**, **Vercel**, or **Heroku**, which support running the Node.js backend alongside the frontend.
+If you require the dynamic API features, consider platforms like **Replit**, **Vercel**, or **Heroku**, which support running the Node.js backend alongside the frontend. GitHub Pages does **not** support Node.js backends.
 
 ## Replacing Placeholder Content
 
