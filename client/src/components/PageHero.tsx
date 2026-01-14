@@ -19,7 +19,7 @@ export function PageHero({
   children, 
   showGradient = true, 
   darkText = false,
-  className = "h-[60vh] md:h-[75vh]"
+  className = "h-[45vh] md:h-[75vh]"
 }: PageHeroProps) {
   return (
     <section className={cn(
