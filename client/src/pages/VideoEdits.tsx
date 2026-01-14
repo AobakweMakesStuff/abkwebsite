@@ -21,7 +21,7 @@ export default function VideoEdits() {
         videoSrc={videoEditsVideo}
         title="Video Edits"
         description="I’ve always had an on-and-off relationship with editing…maybe because it often takes so much time and effort to end up with a video shorter than the duration it took to create😅 The one thing you can count on is that it’s always worth the effort🤭"
-        className="min-h-0 pt-32 pb-4"
+        className="min-h-[60vh] pt-32 pb-32"
         showGradient={false}
         darkText={true}
       />
