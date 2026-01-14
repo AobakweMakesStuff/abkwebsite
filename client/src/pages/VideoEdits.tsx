@@ -14,19 +14,19 @@ export default function VideoEdits() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#1a1a1a] text-white font-display">
+    <div className="min-h-screen bg-white text-black font-display">
       <Navigation />
       
       <PageHero 
         videoSrc={videoEditsVideo}
         title="Video Edits"
         description="I’ve always had an on-and-off relationship with editing…maybe because it often takes so much time and effort to end up with a video shorter than the duration it took to create😅 The one thing you can count on is that it’s always worth the effort🤭"
-        className="min-h-0 pt-32 pb-24"
+        className="min-h-0 pt-32 pb-4"
         showGradient={false}
         darkText={true}
       />
 
-      <main className="container mx-auto px-6 py-24 max-w-7xl space-y-24">
+      <main className="container mx-auto px-6 py-4 max-w-7xl space-y-24">
         <section className="space-y-16">
           <div className="text-center space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase font-display">My latest work in the real world</h2>
@@ -35,7 +35,7 @@ export default function VideoEdits() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             {/* Instagram Reel Embed */}
-            <div className="flex justify-center bg-white rounded-xl overflow-hidden shadow-xl p-4">
+            <div className="flex justify-center bg-white rounded-xl overflow-hidden shadow-xl p-4 border border-black/5">
               <iframe 
                 src="https://www.instagram.com/reel/DRE6X_iCAVR/embed/captioned/" 
                 width="400" 
