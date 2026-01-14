@@ -11,7 +11,7 @@ export function Hero() {
         <img 
           src={abkPhoto} 
           alt="Background" 
-          className="w-full h-full object-cover opacity-80"
+          className="w-full h-full object-cover opacity-80 object-[center_20%] md:object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/40" />
       </div>
@@ -57,7 +57,7 @@ export function Hero() {
         <div className="h-[40vh] md:h-auto md:block" />
 
         {/* Right Text */}
-        <div className="space-y-6 text-sm md:text-base font-light leading-relaxed drop-shadow-lg text-left">
+        <div className="space-y-4 md:space-y-6 text-sm md:text-base font-light leading-relaxed drop-shadow-lg text-left">
           <p className="max-w-[450px]">
             Since my teen years, I've grown in different skills and creative interests. 
             Some were just hobbies, some were entrepreneurial, and some even became career stepping stones. 
@@ -70,7 +70,7 @@ export function Hero() {
       </div>
 
       {/* Bottom Navigation Buttons */}
-      <div className="relative z-20 flex flex-col md:flex-row gap-4 w-full max-w-4xl px-6 mb-12">
+      <div className="relative z-20 flex flex-col md:flex-row gap-4 w-full max-w-4xl px-6 mb-8 md:mb-12">
         <Link href="/graphics" className="flex-1">
           <button className="w-full py-4 px-6 border-2 border-white/20 rounded-full hover:bg-white hover:text-black transition-all duration-300 text-[10px] tracking-widest uppercase font-medium">
             AOBAKWE MAKES GRAPHICS
