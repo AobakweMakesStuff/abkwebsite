@@ -43,7 +43,7 @@ export default function Graphics() {
         description="My graphic design journey started in my early teens, making stuff for my home church. From there I built a small business, worked on personal projects, and eventually designed at WeThinkCode_ (the software development academy I attended)."
         showGradient={false}
         darkText={true}
-        className="min-h-0 pt-20 pb-6 md:pt-32 md:pb-8"
+        className="min-h-0 pt-28 pb-6 md:pt-32 md:pb-8"
       >
         <div className="flex flex-wrap justify-center gap-3 md:gap-4">
           {tags.map((tag) => (
