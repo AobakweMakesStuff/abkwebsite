@@ -5,7 +5,7 @@ import amsLogo from "@assets/AMS_LogoTransparent_White_1768045691519.png";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-between overflow-hidden bg-black text-white pt-0 pb-8 md:pt-0 md:pb-8">
+    <section className="relative min-h-[140vh] md:min-h-screen flex flex-col items-center justify-between overflow-hidden bg-black text-white pt-0 pb-8 md:pt-0 md:pb-8">
       {/* Background Image Wash */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -28,7 +28,7 @@ export function Hero() {
       {/* Main Content Grid */}
       <div className="relative z-10 w-full px-6 flex flex-col md:flex-row md:justify-between items-center md:items-end gap-12 md:gap-0 -mt-12 md:-mt-20">
         {/* Left Text */}
-        <div className="md:max-w-xs lg:max-w-sm space-y-1 md:space-y-4 text-sm md:text-base font-light leading-relaxed drop-shadow-lg text-left md:ml-12 lg:ml-24">
+        <div className="mt-12 md:mt-0 md:max-w-xs lg:max-w-sm space-y-1 md:space-y-4 text-sm md:text-base font-light leading-relaxed drop-shadow-lg text-left md:ml-12 lg:ml-24">
           <p>Hi there!</p>
           <p>My name is Aobakwe, but most people just call me ABK :)</p>
           <p className="max-w-[320px]">
@@ -54,7 +54,7 @@ export function Hero() {
         </div>
 
         {/* Center Space - visible and taller on mobile to clear face */}
-        <div className="h-[50vh] md:hidden" />
+        <div className="h-[60vh] md:hidden" />
 
         {/* Right Text */}
         <div className="md:max-w-xs lg:max-w-sm space-y-4 md:space-y-6 text-sm md:text-base font-light leading-relaxed drop-shadow-lg text-left md:text-right md:mr-12 lg:mr-24 pb-0">
