@@ -26,7 +26,7 @@ export function Hero() {
       </div>
 
       {/* Main Content Grid */}
-      <div className="relative z-10 w-full px-6 flex flex-col md:flex-row md:justify-between items-center md:items-start gap-12 md:gap-0 -mt-12 md:-mt-20">
+      <div className="relative z-10 w-full px-6 flex flex-col md:flex-row md:justify-between items-center md:items-end gap-12 md:gap-0 -mt-12 md:-mt-20">
         {/* Left Text */}
         <div className="md:max-w-xs lg:max-w-sm space-y-1 md:space-y-4 text-sm md:text-base font-light leading-relaxed drop-shadow-lg text-left md:ml-12 lg:ml-24">
           <p>Hi there!</p>
@@ -57,7 +57,7 @@ export function Hero() {
         <div className="h-[50vh] md:hidden" />
 
         {/* Right Text */}
-        <div className="md:max-w-xs lg:max-w-sm space-y-4 md:space-y-6 text-sm md:text-base font-light leading-relaxed drop-shadow-lg text-left md:text-right md:mr-12 lg:mr-24">
+        <div className="md:max-w-xs lg:max-w-sm space-y-4 md:space-y-6 text-sm md:text-base font-light leading-relaxed drop-shadow-lg text-left md:text-right md:mr-12 lg:mr-24 pb-0">
           <p>
             Since my teen years, I've grown in different skills and creative interests. 
             Some were just hobbies, some were entrepreneurial, and some even became career stepping stones. 
