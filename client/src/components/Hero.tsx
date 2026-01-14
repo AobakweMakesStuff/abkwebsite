@@ -17,16 +17,16 @@ export function Hero() {
       </div>
 
       {/* Top Logo Section */}
-      <div className="relative z-20 text-center mb-4 -mt-24 md:-mt-32">
+      <div className="relative z-20 text-center mb-0 -mt-24 md:-mt-32">
         <img 
           src={amsLogo} 
           alt="AMS Aobakwe Makes Stuff" 
-          className="h-32 md:h-48 mx-auto object-contain mb-4"
+          className="h-32 md:h-48 mx-auto object-contain mb-2"
         />
       </div>
 
       {/* Main Content Grid */}
-      <div className="relative z-10 container max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-[1.2fr_0.6fr_1.2fr] items-center gap-12 md:gap-8 mb-16">
+      <div className="relative z-10 container max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-[1.2fr_0.6fr_1.2fr] items-center gap-12 md:gap-8 mb-4 md:mb-16">
         {/* Left Text */}
         <div className="space-y-1 md:space-y-4 text-sm md:text-base font-light leading-relaxed drop-shadow-lg text-left">
           <p>Hi there!</p>
@@ -70,7 +70,7 @@ export function Hero() {
       </div>
 
       {/* Bottom Navigation Buttons */}
-      <div className="relative z-20 flex flex-col md:flex-row gap-4 w-full max-w-4xl px-6 mb-8 md:mb-12">
+      <div className="relative z-20 flex flex-col md:flex-row gap-4 w-full max-w-4xl px-6 mb-8">
         <Link href="/graphics" className="flex-1">
           <button className="w-full py-4 px-6 border-2 border-white/20 rounded-full hover:bg-white hover:text-black transition-all duration-300 text-[10px] tracking-widest uppercase font-medium">
             AOBAKWE MAKES GRAPHICS
