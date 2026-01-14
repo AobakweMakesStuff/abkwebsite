@@ -308,7 +308,7 @@ export default function Graphics() {
         </section>
       </main>
 
-      <Footer />
+      <Footer variant="dark" />
     </div>
   );
 }

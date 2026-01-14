@@ -14,7 +14,7 @@ export default function VideoEdits() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-black font-display">
+    <div className="min-h-screen bg-[#1a1a1a] text-white font-display">
       <Navigation />
       
       <PageHero 
@@ -119,7 +119,7 @@ export default function VideoEdits() {
         </section>
       </main>
 
-      <Footer />
+      <Footer variant="dark" />
     </div>
   );
 }
