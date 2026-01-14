@@ -1,26 +1,28 @@
 import { useQuery } from "@tanstack/react-query";
-import { api, buildUrl } from "@shared/routes";
+import projectsData from "../data/projects.json"
+import { type Project } from "@shared/schema"
 
 export function useProjects() {
   return useQuery({
-    queryKey: [api.projects.list.path],
+    queryKey: ["/api/projects"],
     queryFn: async () => {
-      const res = await fetch(api.projects.list.path);
-      if (!res.ok) throw new Error("Failed to fetch projects");
-      return api.projects.list.responses[200].parse(await res.json());
+      // Instead of fetch, we return the imported JSON data
+      return projectsData as Project[];
     },
   });
 }
 
 export function useProject(id: number) {
   return useQuery({
-    queryKey: [api.projects.get.path, id],
+    queryKey: ["/api/projects", id],
     queryFn: async () => {
-      const url = buildUrl(api.projects.get.path, { id });
-      const res = await fetch(url);
-      if (res.status === 404) return null;
-      if (!res.ok) throw new Error("Failed to fetch project");
-      return api.projects.get.responses[200].parse(await res.json());
+      if (!id) return null;
+      
+      // Look through the JSON array to find the specific project
+      const project = (projectsData as Project[]).find(p => p.id === id);
+      
+      if (!project) return null;
+      return project;
     },
     enabled: !!id,
   });
