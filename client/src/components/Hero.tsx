@@ -28,7 +28,7 @@ export function Hero() {
       {/* Main Content Grid */}
       <div className="relative z-10 container max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-[1.2fr_0.6fr_1.2fr] items-center gap-12 md:gap-8 mb-16">
         {/* Left Text */}
-        <div className="space-y-4 text-sm md:text-base font-light leading-relaxed drop-shadow-lg text-left">
+        <div className="space-y-1 md:space-y-4 text-sm md:text-base font-light leading-relaxed drop-shadow-lg text-left">
           <p>Hi there!</p>
           <p>My name is Aobakwe, but most people just call me ABK :)</p>
           <p className="max-w-[320px]">
@@ -37,7 +37,7 @@ export function Hero() {
           <p className="italic font-normal">
             Jack of all trades, master of none...
             <motion.span 
-              className="relative inline not-italic font-bold text-white"
+              className="relative inline not-italic font-bold text-white ml-1"
               initial={{ backgroundSize: "0% 100%" }}
               whileInView={{ backgroundSize: "100% 100%" }}
               viewport={{ once: true }}
