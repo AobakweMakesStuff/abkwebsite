@@ -85,7 +85,7 @@ export default function VideoEdits() {
               </div>
               <div className="aspect-[9/16] rounded-xl overflow-hidden shadow-xl hover-elevate transition-all duration-500 bg-black">
                 <video controls className="w-full h-full object-cover">
-                  <source src="/attached_assets/Perfume_ASMR_1768304970707.mp4" type="video/mp4" />
+                  <source src="/attached_assets/Perfume_ASMR_1768370424181.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
