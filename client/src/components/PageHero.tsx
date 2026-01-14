@@ -21,7 +21,10 @@ export function PageHero({
   className = "h-[60vh] md:h-[75vh]"
 }: PageHeroProps) {
   return (
-    <section className={`relative flex flex-col items-center justify-center overflow-hidden bg-white text-white ${className}`}>
+    <section className={cn(
+      "relative flex flex-col items-center justify-center overflow-hidden bg-white text-white transition-all duration-300",
+      className
+    )}>
       {/* Video Background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <video
