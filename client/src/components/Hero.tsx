@@ -26,7 +26,7 @@ export function Hero() {
       </div>
 
       {/* Main Content Grid */}
-      <div className="relative z-10 container max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-[1.2fr_0.6fr_1.2fr] items-center gap-4 md:gap-8 mb-16">
+      <div className="relative z-10 container max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-[1.2fr_0.6fr_1.2fr] items-center gap-12 md:gap-8 mb-16">
         {/* Left Text */}
         <div className="space-y-4 text-sm md:text-base font-light leading-relaxed drop-shadow-lg text-left">
           <p>Hi there!</p>
@@ -53,8 +53,8 @@ export function Hero() {
           </p>
         </div>
 
-        {/* Center Space */}
-        <div className="hidden md:block" />
+        {/* Center Space - visible and taller on mobile to clear face */}
+        <div className="h-[40vh] md:h-auto md:block" />
 
         {/* Right Text */}
         <div className="space-y-6 text-sm md:text-base font-light leading-relaxed drop-shadow-lg text-left">
