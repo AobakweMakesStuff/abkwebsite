@@ -5,7 +5,7 @@ import amsLogo from "@assets/AMS_LogoTransparent_White_1768045691519.png";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-between overflow-hidden bg-black text-white py-12 md:py-16">
+    <section className="relative min-h-screen flex flex-col items-center justify-between overflow-hidden bg-black text-white py-4 md:py-8">
       {/* Background Image Wash */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -17,7 +17,7 @@ export function Hero() {
       </div>
 
       {/* Top Logo Section */}
-      <div className="relative z-20 text-center w-full">
+      <div className="relative z-20 text-center w-full mt-0">
         <img 
           src={amsLogo} 
           alt="AMS Aobakwe Makes Stuff" 
@@ -26,7 +26,7 @@ export function Hero() {
       </div>
 
       {/* Main Content Grid */}
-      <div className="relative z-10 w-full px-6 flex flex-col md:flex-row md:justify-between items-center md:items-start gap-12 md:gap-0 mt-8 md:mt-0">
+      <div className="relative z-10 w-full px-6 flex flex-col md:flex-row md:justify-between items-center md:items-start gap-12 md:gap-0 -mt-12 md:-mt-20">
         {/* Left Text */}
         <div className="md:max-w-xs lg:max-w-sm space-y-1 md:space-y-4 text-sm md:text-base font-light leading-relaxed drop-shadow-lg text-left md:ml-12 lg:ml-24">
           <p>Hi there!</p>
@@ -70,7 +70,7 @@ export function Hero() {
       </div>
 
       {/* Bottom Navigation Buttons */}
-      <div className="relative z-20 flex flex-col md:flex-row gap-4 w-full max-w-4xl px-6">
+      <div className="relative z-20 flex flex-col md:flex-row gap-4 w-full max-w-4xl px-6 mb-8">
         <Link href="/graphics" className="flex-1">
           <button className="w-full py-4 px-6 border-2 border-white/20 rounded-full hover:bg-white hover:text-black transition-all duration-300 text-[10px] tracking-widest uppercase font-medium">
             AOBAKWE MAKES GRAPHICS
