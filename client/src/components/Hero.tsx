@@ -17,7 +17,7 @@ export function Hero() {
       </div>
 
       {/* Top Logo Section */}
-      <div className="relative z-20 text-center w-full mt-0 pt-0">
+      <div className="relative z-20 text-center w-full mt-[-2rem] md:mt-[-4rem]">
         <img 
           src={amsLogo} 
           alt="AMS Aobakwe Makes Stuff" 
