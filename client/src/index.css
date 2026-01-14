@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -37,7 +37,6 @@
 
   /* Fonts */
   --font-sans: 'DM Sans', sans-serif;
-  --font-display: 'Space Grotesk', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
   --radius: 0.75rem;
@@ -54,12 +53,12 @@
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-display);
     @apply tracking-tight font-medium;
+    font-family: var(--font-sans);
   }
 
   button, .button {
-    font-family: var(--font-display);
+    font-family: var(--font-sans);
   }
 
   code, pre {
