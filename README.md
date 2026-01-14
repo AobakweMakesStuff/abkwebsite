@@ -31,26 +31,37 @@ To run this project on your local machine, follow these steps:
     - [Git](https://git-scm.com/) (for version control)
     - A code editor like [VS Code](https://code.visualstudio.com/)
 
-2.  **Environment Setup**:
-    - **Replit SSH (Recommended for VS Code)**:
-        1. Open the **SSH** pane in your Replit project.
-        2. Follow the instructions to add your public SSH key.
-        3. Use the provided SSH command to connect your local VS Code to Replit using the "Remote - SSH" extension.
-    - **Clone Locally**:
-        1. Clone the repository: `git clone <your-repo-url>`
-        2. Navigate to the directory: `cd <your-project-folder>`
+2.  **Offline / Fully Local Setup (VS Code)**:
+    If you want to run the project entirely on your local machine without needing an internet connection (once dependencies are installed):
+    1.  **Clone Locally**:
+        - Download the project zip or clone the repository: `git clone <your-repo-url>`
+        - Open the folder in **VS Code**.
+    2.  **Install Dependencies**:
+        - Open the VS Code terminal (`Ctrl+` ` ` or `Cmd+` ` `).
+        - Run: `npm install`
+    3.  **Run Locally**:
+        - Start the development server: `npm run dev`
+        - The terminal will show the local address, typically `http://localhost:5000`.
+    4.  **Database (Optional)**:
+        - The project is currently configured to use **in-memory storage**, so it works offline immediately.
+        - If you later switch to the PostgreSQL database, you will need to install [PostgreSQL](https://www.postgresql.org/) locally and provide a `DATABASE_URL` in a `.env` file.
 
-3.  **Install Dependencies**:
+3.  **Replit SSH (Alternative for VS Code)**:
+    - Open the **SSH** pane in your Replit project.
+    - Follow the instructions to add your public SSH key.
+    - Use the provided SSH command to connect your local VS Code to Replit using the "Remote - SSH" extension.
+
+4.  **Install Dependencies**:
     ```bash
     npm install
     ```
 
-4.  **Run the Application**:
+5.  **Run the Application**:
     ```bash
     npm run dev
     ```
 
-5.  **Access the Site**: Open your browser and navigate to `http://localhost:5000`.
+6.  **Access the Site**: Open your browser and navigate to `http://localhost:5000`.
 
 ## Deployment to GitHub Pages
 
