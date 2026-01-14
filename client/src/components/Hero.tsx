@@ -54,7 +54,7 @@ export function Hero() {
         </div>
 
         {/* Center Space - visible and taller on mobile to clear face */}
-        <div className="h-[40vh] md:h-auto md:block" />
+        <div className="h-[50vh] md:h-auto md:block" />
 
         {/* Right Text */}
         <div className="space-y-4 md:space-y-6 text-sm md:text-base font-light leading-relaxed drop-shadow-lg text-left">
