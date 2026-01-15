@@ -25,7 +25,7 @@ function RouterComponent() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Router base="/abkwebsite">
+      <Router base="/">
         <TooltipProvider>
           <Toaster />
           <RouterComponent />
