@@ -107,7 +107,7 @@ export class MemStorage implements IStorage {
         tags: ["Logos"],
         gallery: [
           "/attached_assets/logo1-03_1768294262000.png",
-          "/attached_assets/mockup_1768294261994.jpg",
+          "/attached_assets/mockup_1768294261994_opt.jpg",
           "/attached_assets/transparent_logo-01_1768294261995.png",
           "/attached_assets/different_typefaces-04_1768294261996.png"
         ]
@@ -127,9 +127,9 @@ export class MemStorage implements IStorage {
           "/attached_assets/temp20251203-18848-e9f4zd_1768295368969.png",
           "/attached_assets/temp20251203-25913-1kn6vz2_1768295368970.png",
           "/attached_assets/temp20251203-25969-18xgsho_1768295368971.png",
-          "/attached_assets/ai-created-mockup-featuring-a-person-holding-a-poster-in-the-s_1768295437217.png",
-          "/attached_assets/cert1_1768295458288.png",
-          "/attached_assets/cert2_1768295458289.png"
+          "/attached_assets/ai-created-mockup_opt.jpg",
+          "/attached_assets/cert1_1768295458288_opt.jpg",
+          "/attached_assets/cert2_1768295458289_opt.jpg"
         ]
       },
       {

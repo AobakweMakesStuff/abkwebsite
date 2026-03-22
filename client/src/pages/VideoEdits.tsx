@@ -80,13 +80,13 @@ export default function VideoEdits() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div className="grid grid-cols-2 gap-6">
               <div className="aspect-[9/16] rounded-xl overflow-hidden shadow-xl hover-elevate transition-all duration-500 bg-black">
-                <video controls preload="none" className="w-full h-full object-cover">
+                <video controls preload="metadata" className="w-full h-full object-cover">
                   <source src="/attached_assets/edgars3_1768304970705.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div className="aspect-[9/16] rounded-xl overflow-hidden shadow-xl hover-elevate transition-all duration-500 bg-black">
-                <video controls preload="none" className="w-full h-full object-cover">
+                <video controls preload="metadata" className="w-full h-full object-cover">
                   <source src="/attached_assets/Perfume_ASMR_1768370424181.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
