@@ -2,111 +2,83 @@
 
 A multidisciplinary creative portfolio showcasing graphics, video, and music projects. Built with a modern TypeScript stack for high performance and visual impact.
 
-## Repository Structure
+## Publishing Changes to the Live Site
+
+The site is hosted on Replit. Here is the workflow for making and publishing any update:
+
+1. **Make your changes** in the editor (code, images, text, etc.)
+2. **Preview** — the preview pane on the right updates live as you edit. Check that everything looks correct.
+3. **Publish** — click the **Deploy** button at the top of the Replit interface, then click **Publish** to push the changes to the live `.replit.app` URL.
+
+That's it. The live site updates within a minute or two after publishing.
+
+> **Note:** Changes are only visible to the public after you publish. Editing in Replit only affects your private preview until you deploy.
+
+---
+
+## Making Common Updates
+
+### Updating project images or descriptions
+Edit `server/storage.ts`. Each project entry has:
+- `title` — display name
+- `description` — shown in the card and modal
+- `thumbnailUrl` — the card preview image
+- `gallery` — array of images shown in the modal slideshow
+
+Image files live in `client/public/attached_assets/`. Add new images there and reference them as `/attached_assets/your-file.jpg`.
+
+### Adding new images
+1. Upload the file to `client/public/attached_assets/`
+2. If the file is large (over 1 MB), compress it first using the ImageMagick command below — large images slow the site down significantly:
+   ```bash
+   magick your-image.png -background white -alpha remove -resize "1920x>" -quality 85 -strip your-image-opt.jpg
+   ```
+3. Reference the compressed file in `server/storage.ts`
+
+### Updating page text or layout
+- **Home page** — `client/src/pages/Home.tsx`
+- **Graphics page** — `client/src/pages/Graphics.tsx`
+- **Video Edits page** — `client/src/pages/VideoEdits.tsx`
+- **About page** — `client/src/pages/About.tsx`
+- **Footer** (email, location) — `client/src/components/Footer.tsx`
+
+### Updating hero background videos
+Hero videos are stored in `client/public/attached_assets/`. The imports are at the top of `Graphics.tsx` and `VideoEdits.tsx`. Replace the file and update the import path.
+
+---
+
+## Project Structure
 
 ```text
 ├── client/                 # Frontend React application
-│   ├── src/
-│   │   ├── components/     # Reusable UI components (Shadcn UI)
-│   │   ├── pages/          # Individual portfolio pages
-│   │   ├── lib/            # Utility functions and API client
-│   │   └── App.tsx         # Main application entry and routing
+│   ├── public/
+│   │   └── attached_assets/    # All images and videos served to the browser
+│   └── src/
+│       ├── components/     # Reusable UI components
+│       ├── pages/          # Individual portfolio pages
+│       └── App.tsx         # Routing
 ├── server/                 # Backend Node.js/Express server
-│   ├── routes.ts           # API endpoint definitions
-│   ├── storage.ts          # In-memory data storage and seeding
+│   ├── storage.ts          # All project data (titles, images, descriptions)
 │   └── index.ts            # Server entry point
-├── shared/                 # Shared TypeScript types and API schemas
-│   ├── schema.ts           # Database/Project data models
-│   └── routes.ts           # API contract and route definitions
-└── attached_assets/        # Original project documentation and assets
+└── shared/                 # Shared TypeScript types
 ```
 
-## Local Development Setup
+## Tech Stack
 
-To run this project on your local machine, follow these steps:
+- **Frontend**: React, Tailwind CSS, Shadcn UI, Framer Motion
+- **Backend**: Node.js, Express
+- **Icons**: Lucide React
+- **Media Playback**: React Player
+- **Hosting**: Replit (autoscale deployment)
 
-1.  **Prerequisites**:
-    - [Node.js](https://nodejs.org/) (v20 or later recommended)
-    - [NPM](https://www.npmjs.com/) (usually comes with Node.js)
-    - [Git](https://git-scm.com/) (for version control)
-    - A code editor like [VS Code](https://code.visualstudio.com/)
+## Running Locally (Optional)
 
-2.  **Offline / Fully Local Setup (VS Code)**:
-    If you want to run the project entirely on your local machine without needing an internet connection (once dependencies are installed):
-    1.  **Clone Locally**:
-        - Download the project zip or clone the repository: `git clone <your-repo-url>`
-        - Open the folder in **VS Code**.
-    2.  **Install Dependencies**:
-        - Open the VS Code terminal (`Ctrl+` ` ` or `Cmd+` ` `).
-        - Run: `npm install`
-    3.  **Run Locally**:
-        - Start the development server: `npm run dev`
-        - The terminal will show the local address, typically `http://localhost:5000`.
-    4.  **Database (Optional)**:
-        - The project is currently configured to use **in-memory storage**, so it works offline immediately.
-        - If you later switch to the PostgreSQL database, you will need to install [PostgreSQL](https://www.postgresql.org/) locally and provide a `DATABASE_URL` in a `.env` file.
+If you ever want to run the project on your own machine:
 
-3.  **Replit SSH (Alternative for VS Code)**:
-    - Open the **SSH** pane in your Replit project.
-    - Follow the instructions to add your public SSH key.
-    - Use the provided SSH command to connect your local VS Code to Replit using the "Remote - SSH" extension.
+1. Install [Node.js](https://nodejs.org/) v20+
+2. Clone the repository and open it in a terminal
+3. Run `npm install`
+4. Run `npm run dev`
+5. Open `http://localhost:5000` in your browser
 
-4.  **Install Dependencies**:
-    ```bash
-    npm install
-    ```
-
-5.  **Run the Application**:
-    ```bash
-    npm run dev
-    ```
-
-6.  **Access the Site**: Open your browser and navigate to `http://localhost:5000`.
-
-## Deployment to GitHub Pages
-
-GitHub Pages serves static content. Since this application uses a Node.js backend for the API, you have two options for deployment:
-
-### Option 1: Static Export (Recommended for GitHub Pages)
-
-GitHub Pages is a free hosting service for static sites. To use it:
-
-1.  **Migrate Data to JSON**:
-    - Move your project data from `server/storage.ts` into a static JSON file (e.g., `client/src/data/projects.json`).
-    - Update your frontend components (like `ProjectGrid.tsx`) to import this JSON file directly or fetch it using `fetch('/data/projects.json')`.
-2.  **Configure Vite**:
-    - In `vite.config.ts`, set the `base` property to your repository name (e.g., `base: '/my-portfolio/'`).
-3.  **Build the Project**:
-    ```bash
-    npm run build
-    ```
-    This creates a `dist` folder.
-4.  **Deploy to GitHub**:
-    - You can use the `gh-pages` package:
-      ```bash
-      npm install -D gh-pages
-      ```
-    - Add these scripts to `package.json`:
-      ```json
-      "predeploy": "npm run build",
-      "deploy": "gh-pages -d dist/public"
-      ```
-    - Run: `npm run deploy`
-5.  **Enable GitHub Pages**: In your GitHub repository settings, go to **Pages** and set the source to the `gh-pages` branch.
-
-### Option 2: Full-Stack Hosting (Alternative)
-If you require the dynamic API features, consider platforms like **Replit**, **Vercel**, or **Heroku**, which support running the Node.js backend alongside the frontend. GitHub Pages does **not** support Node.js backends.
-
-## Replacing Placeholder Content
-
-To add your actual creative work:
-1.  **Graphics**: Place your image files in `client/public/images/projects/`. Update the `mediaUrl` and `thumbnailUrl` in `server/storage.ts` to `/images/projects/your-file.png`.
-2.  **Videos**: Use YouTube URLs in the `mediaUrl` field.
-3.  **Music**: Use YouTube or Spotify embed links in the `mediaUrl` field.
-
-## Technical Details
-
--   **Frontend**: React, Tailwind CSS, Shadcn UI, Framer Motion.
--   **Backend**: Node.js, Express.
--   **Icons**: Lucide React.
--   **Media Playback**: React Player.
+The project uses in-memory storage, so it works offline immediately with no database setup required.
