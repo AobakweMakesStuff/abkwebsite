@@ -4,15 +4,47 @@ A multidisciplinary creative portfolio showcasing graphics, video, and music pro
 
 ## Publishing Changes to the Live Site
 
-The site is hosted on Replit. Here is the workflow for making and publishing any update:
+The site is hosted on **GitHub Pages**. The workflow for pushing an update from a local IDE is:
 
-1. **Make your changes** in the editor (code, images, text, etc.)
-2. **Preview** — the preview pane on the right updates live as you edit. Check that everything looks correct.
-3. **Publish** — click the **Deploy** button at the top of the Replit interface, then click **Publish** to push the changes to the live `.replit.app` URL.
+1. **Make your changes** locally
+2. **Preview locally** — run `npm run dev` and open `http://localhost:5000` to check everything looks right
+3. **Commit and push** your changes to the `main` branch:
+   ```bash
+   git add .
+   git commit -m "describe your change here"
+   git push origin main
+   ```
+4. **Deploy to GitHub Pages**:
+   ```bash
+   npm run deploy
+   ```
+   This builds the project and pushes the compiled output to the `gh-pages` branch, which GitHub Pages serves as the live site.
 
-That's it. The live site updates within a minute or two after publishing.
+The live site updates within a minute or two after the deploy command finishes.
 
-> **Note:** Changes are only visible to the public after you publish. Editing in Replit only affects your private preview until you deploy.
+> **Note:** Just pushing to `main` does **not** update the live site. You must run `npm run deploy` after pushing for the changes to go live.
+
+---
+
+## Running Locally
+
+1. Install [Node.js](https://nodejs.org/) v20+
+2. Clone the repository:
+   ```bash
+   git clone <your-repo-url>
+   cd <repo-folder>
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+5. Open `http://localhost:5000` in your browser.
+
+The project uses in-memory storage, so no database setup is needed.
 
 ---
 
@@ -28,8 +60,8 @@ Edit `server/storage.ts`. Each project entry has:
 Image files live in `client/public/attached_assets/`. Add new images there and reference them as `/attached_assets/your-file.jpg`.
 
 ### Adding new images
-1. Upload the file to `client/public/attached_assets/`
-2. If the file is large (over 1 MB), compress it first using the ImageMagick command below — large images slow the site down significantly:
+1. Drop the file into `client/public/attached_assets/`
+2. **Compress it first if it's over 1 MB** — large images slow the site significantly. Use ImageMagick (install via [imagemagick.org](https://imagemagick.org)):
    ```bash
    magick your-image.png -background white -alpha remove -resize "1920x>" -quality 85 -strip your-image-opt.jpg
    ```
@@ -69,16 +101,4 @@ Hero videos are stored in `client/public/attached_assets/`. The imports are at t
 - **Backend**: Node.js, Express
 - **Icons**: Lucide React
 - **Media Playback**: React Player
-- **Hosting**: Replit (autoscale deployment)
-
-## Running Locally (Optional)
-
-If you ever want to run the project on your own machine:
-
-1. Install [Node.js](https://nodejs.org/) v20+
-2. Clone the repository and open it in a terminal
-3. Run `npm install`
-4. Run `npm run dev`
-5. Open `http://localhost:5000` in your browser
-
-The project uses in-memory storage, so it works offline immediately with no database setup required.
+- **Hosting**: GitHub Pages
