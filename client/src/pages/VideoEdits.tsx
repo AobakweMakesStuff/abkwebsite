@@ -43,6 +43,7 @@ export default function VideoEdits() {
                 frameBorder="0" 
                 scrolling="no" 
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                loading="lazy"
                 className="mx-auto"
               ></iframe>
             </div>
@@ -60,6 +61,7 @@ export default function VideoEdits() {
                       title="YouTube video player"
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      loading="lazy"
                       allowFullScreen
                     ></iframe>
                   </div>
@@ -78,13 +80,13 @@ export default function VideoEdits() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div className="grid grid-cols-2 gap-6">
               <div className="aspect-[9/16] rounded-xl overflow-hidden shadow-xl hover-elevate transition-all duration-500 bg-black">
-                <video controls className="w-full h-full object-cover">
+                <video controls preload="none" className="w-full h-full object-cover">
                   <source src="/attached_assets/edgars3_1768304970705.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div className="aspect-[9/16] rounded-xl overflow-hidden shadow-xl hover-elevate transition-all duration-500 bg-black">
-                <video controls className="w-full h-full object-cover">
+                <video controls preload="none" className="w-full h-full object-cover">
                   <source src="/attached_assets/Perfume_ASMR_1768370424181.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
@@ -100,6 +102,7 @@ export default function VideoEdits() {
                   title="ADMIT IT! We are ALL tired."
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  loading="lazy"
                   allowFullScreen
                 ></iframe>
               </div>
@@ -111,6 +114,7 @@ export default function VideoEdits() {
                   title="MNCV VLOG: Spend A Chilled Weekend With Us 🤪 | Vax Shots, Almost Getting Arrested At Menlyn, Brunch"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  loading="lazy"
                   allowFullScreen
                 ></iframe>
               </div>

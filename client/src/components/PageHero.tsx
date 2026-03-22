@@ -33,6 +33,7 @@ export function PageHero({
           loop
           muted
           playsInline
+          preload="metadata"
           className={`w-full h-full object-cover object-center ${darkText ? 'opacity-100' : 'opacity-60'}`}
         >
           <source src={videoSrc} type="video/mp4" />

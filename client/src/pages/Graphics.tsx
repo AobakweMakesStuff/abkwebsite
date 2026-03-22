@@ -105,6 +105,7 @@ export default function Graphics() {
                     <img 
                       src={img} 
                       alt={`WeThinkCode Branding ${idx + 1}`}
+                      loading="lazy"
                       className="w-full h-auto block"
                     />
                   </div>
@@ -134,6 +135,7 @@ export default function Graphics() {
                     <img 
                       src={img} 
                       alt={`Social Media Mockup ${idx + 1}`}
+                      loading="lazy"
                       className="w-full h-full object-contain"
                     />
                   </div>
@@ -184,6 +186,7 @@ export default function Graphics() {
                     <img 
                       src={img} 
                       alt={`Hoodie Design ${idx + 1}`}
+                      loading="lazy"
                       className="w-full h-auto block"
                     />
                   </div>
@@ -215,6 +218,7 @@ export default function Graphics() {
                   <img 
                     src={img} 
                     alt={`Google Display Ad ${idx + 1}`}
+                    loading="lazy"
                     className="w-full h-full object-contain"
                   />
                 </div>
@@ -266,6 +270,7 @@ export default function Graphics() {
                 <img 
                   src={img} 
                   alt={`Logo Redraw ${index + 1}`}
+                  loading="lazy"
                   className="w-full h-auto block"
                 />
               </div>
@@ -295,6 +300,7 @@ export default function Graphics() {
               <img 
                 src="/attached_assets/Church@Home_1764787849253_1768301139380.png" 
                 alt="Church@Home Graphic Design"
+                loading="lazy"
                 className="w-full h-auto block"
               />
             </div>
