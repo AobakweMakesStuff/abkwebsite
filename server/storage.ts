@@ -183,8 +183,8 @@ export class MemStorage implements IStorage {
         title: "Conference & Special Events",
         description: "A collection of event-specific graphics including promotional material for virtual conferences, prayer meetings, youth and father's day celebrations, and marriage anniversaries. These designs focus on clear communication of event details while maintaining a vibrant community aesthetic.",
         type: "graphic",
-        mediaUrl: "/attached_assets/behance_img_5_1768301463022.png",
-        thumbnailUrl: "/attached_assets/behance_img_5_1768301463022.png",
+        mediaUrl: "/attached_assets/behance_img_5_1768301463022_opt.jpg",
+        thumbnailUrl: "/attached_assets/behance_img_5_1768301463022_opt.jpg",
         featured: true,
         tags: ["Church"],
         gallery: [
@@ -192,7 +192,7 @@ export class MemStorage implements IStorage {
           "/attached_assets/behance_img_2_1768301463017.jpg",
           "/attached_assets/behance_img_3_1768301463018.jpg",
           "/attached_assets/behance_img_4_1768301463019.jpg",
-          "/attached_assets/behance_img_5_1768301463022.png",
+          "/attached_assets/behance_img_5_1768301463022_opt.jpg",
           "/attached_assets/behance_img_6_1768301463024.jpg",
           "/attached_assets/behance_img_7_1768301463027.jpg"
         ]
@@ -201,15 +201,15 @@ export class MemStorage implements IStorage {
         title: "Marriage Ablaze Branding",
         description: "Event branding and promotional graphics for the 'Marriage Ablaze' ministry. This project featured warm, inviting visuals for couples' lunches, Valentine's Day celebrations, webinars on conflict resolution, and community braais, all designed to foster connection and strengthening relationships.",
         type: "graphic",
-        mediaUrl: "/attached_assets/behance_img_1_1768301956310.png",
-        thumbnailUrl: "/attached_assets/behance_img_1_1768301956310.png",
+        mediaUrl: "/attached_assets/behance_img_1_1768301956310_opt.jpg",
+        thumbnailUrl: "/attached_assets/behance_img_1_1768301956310_opt.jpg",
         featured: true,
         tags: ["Church"],
         gallery: [
-          "/attached_assets/behance_img_1_1768301956310.png",
+          "/attached_assets/behance_img_1_1768301956310_opt.jpg",
           "/attached_assets/behance_img_2_1768301956311.jpg",
           "/attached_assets/behance_img_3_1768301956312.jpg",
-          "/attached_assets/behance_img_4_1768301956313.png",
+          "/attached_assets/behance_img_4_1768301956313_opt.jpg",
           "/attached_assets/behance_img_5_1768301956317.jpg"
         ]
       },
