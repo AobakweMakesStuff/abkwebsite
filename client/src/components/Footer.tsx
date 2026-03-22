@@ -15,7 +15,7 @@ export function Footer({ variant = "default" }: { variant?: "default" | "dark" }
         )}>
           <div className="flex-1 text-left">Aobakwe Makes Stuff</div>
           <div className="flex-1 text-center">Gauteng, South Africa</div>
-          <div className="flex-1 text-right">info@aobakwemakesstuff.com</div>
+          <div className="flex-1 text-right">aobakwemore1@gmail.com</div>
         </div>
         <div className="mt-8 text-center text-sm font-medium tracking-wide uppercase text-[#4db300]">
           © {new Date().getFullYear()} All rights reserved.
